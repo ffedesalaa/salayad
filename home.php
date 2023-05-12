@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href=""><div class="logo">MOMENTUM</div></a>
+        <a href=""><div class="logo"><b>MOMENTUM</b></div></a>
         
         <a href=""><div class="login">Login</div></a>
     </header>
