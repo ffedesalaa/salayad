@@ -5,20 +5,29 @@ body{
     background: rgb(43, 43, 43);
 }
 
+a{
+    text-decoration: none;
+}
+
 header{
     width: 100%;
     height: 60px;
     display: flex;
-    background: rgb(43, 43, 43);;
+    background: rgb(43, 43, 43); 
     align-items: center;
     padding: 10px;
-    border-bottom: solid rgb(78, 77, 77) 2px;
+    border-bottom: solid rgb(78, 77, 77) 4px;
 
 }
 
 header a{
     text-decoration: none;
     color:white;
+}
+
+.logo{
+    font-size: large;
+    font-family: Arial;
 }
 
 main{
@@ -30,23 +39,25 @@ main{
 }
 
 .main__menu{
-    background: rgb(43, 43, 43);
+    background: rgb(43, 43, 43);;
     width: 250px;
     border-right: solid rgb(78, 77, 77) 2px;
     height: 1000px;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .tendina{
-    text-decoration: none;
     color:white;
     font-family: Arial;
-    background-color: orange;
     width: 150px;
-    text-align: center;
-    border-radius: 20px;
+    text-align: left;
+    margin: 0 auto; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid rgb(78, 77, 77) 2px;
+}
+
+.tendina:hover{
+    border-bottom: solid orange 2px;
 }
 
 .main__pagina{

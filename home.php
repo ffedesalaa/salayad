@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href=""><img src="" alt="logo"></a>
+        <a href=""><div class="logo">MOMENTUM</div></a>
         
         <a href=""><div class="login">Login</div></a>
     </header>
@@ -19,7 +19,7 @@
             <a href=""><div class="tendina" id="seguiti">SEGUITI</div></a>
         </div>
         <div class="main__pagina">
-            <p>fffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+           
         </div>
     </main>
 </body>
