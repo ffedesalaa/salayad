@@ -34,7 +34,19 @@ main{
     width: 250px;
     border-right: solid rgb(78, 77, 77) 2px;
     height: 1000px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tendina{
+    text-decoration: none;
+    color:white;
+    font-family: Arial;
+    background-color: orange;
+    width: 150px;
     text-align: center;
+    border-radius: 20px;
 }
 
 .main__pagina{
