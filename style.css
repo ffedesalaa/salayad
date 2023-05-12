@@ -29,14 +29,8 @@ header a{
     font-size: 35px;
     font-family: Arial;
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-left: 5px;
-}
-
-.login{
-    position:absolute;
-    right: 0;
 }
 
 main{
