@@ -11,12 +11,15 @@
     <header>
         <a href=""><div class="logo"><b>MOMENTUM</b></div></a>
         
-        <a href=""><div class="login">Login</div></a>
+        <a href=""><div class="login"><b>LOGIN</b></div></a>
     </header>
     <main>
         <div class="main__menu">
-            <a href=""><div class="tendina" id="suggeriti">SUGGERITI</div></a>
+            <a href=""><div class="tendina" id="home">HOME</div></a>
+            <a href=""><div class="tendina" id="esplora">ESPLORA</div></a>
             <a href=""><div class="tendina" id="seguiti">SEGUITI</div></a>
+            <a href=""><div class="tendina" id="messaggi">MESSAGGI</div></a>
+            <a href=""><div class="tendina" id="crea">CREA</div></a>
         </div>
         <div class="main__pagina">
            
