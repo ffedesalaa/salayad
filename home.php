@@ -10,13 +10,17 @@
 <body>
     <header>
         <a href=""><img src="" alt="logo"></a>
-        <nav>
-            <a href=""><div class="tendina" id="suggeriti">Suggeriti</div></a>
-            <a href=""><div class="tendina" id="seguiti">Seguiti</div></a>
-        </nav>
-
-
+        
         <a href=""><div class="login">Login</div></a>
     </header>
+    <main>
+        <div class="main__menu">
+            <a href=""><div class="tendina" id="suggeriti">SUGGERITI</div></a>
+            <a href=""><div class="tendina" id="seguiti">SEGUITI</div></a>
+        </div>
+        <div class="main__pagina">
+            <p>fffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+        </div>
+    </main>
 </body>
 </html>

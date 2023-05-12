@@ -1,13 +1,18 @@
 *{box-sizing: border-box; margin: 0;}
 
+    
+body{
+    background: rgb(43, 43, 43);
+}
 
 header{
     width: 100%;
     height: 60px;
     display: flex;
-    background: black;
+    background: rgb(43, 43, 43);;
     align-items: center;
     padding: 10px;
+    border-bottom: solid rgb(78, 77, 77) 2px;
 
 }
 
@@ -16,11 +21,28 @@ header a{
     color:white;
 }
 
-
-nav{
+main{
+    width: 100%;
+    background: #000000;
+    margin: 0 auto;
+    height: 1000px;
     display: flex;
 }
 
+.main__menu{
+    background: rgb(43, 43, 43);
+    width: 250px;
+    border-right: solid rgb(78, 77, 77) 2px;
+    height: 1000px;
+    text-align: center;
+}
+
+.main__pagina{
+    background: #000;
+    border-right: solid rgb(78, 77, 77) 2px;
+    height: 1000px;
+    flex: 1;    
+}
 
 
 
