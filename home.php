@@ -10,8 +10,14 @@
 <body>
     <header>
         <a href=""><div class="logo"><b>MOMENTUM</b></div></a>
-        
-        <a href=""><div class="login"><b>LOGIN</b></div></a>
+        <div class="barraRicerca">
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <input type="text" name="barra" id="barra" placeholder="Cerca">
+            <ion-icon name="search-outline" id="search-outline"></ion-icon>
+        </div>
+      
+        <a href="./File_PHP/login.php"><div class="login"><b>LOGIN</b></div></a>
     </header>
     <main>
         <div class="main__menu">
@@ -25,5 +31,9 @@
            
         </div>
     </main>
+
+    <footer>
+        <div>Sito fatto dai Salayad</div>
+    </footer>
 </body>
 </html>
