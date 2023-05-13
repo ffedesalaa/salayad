@@ -17,8 +17,9 @@ header{
     background: rgb(43, 43, 43); 
     padding: 10px;
     border-bottom: solid rgb(78, 77, 77) 4px;
-    display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 1;
 }
 
 header a{
@@ -41,6 +42,7 @@ main{
     margin: 0 auto;
     height: 1000px;
     display: flex;
+
 }
 
 .login{
@@ -63,6 +65,8 @@ main{
     width: 250px;
     border-right: solid rgb(78, 77, 77) 2px;
     height: 1000px;
+    position: fixed;
+    padding-top: 65px;
 }
 
 .tendina{
@@ -102,16 +106,6 @@ main{
     height: 1000px;
     flex: 1;    
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
