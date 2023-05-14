@@ -248,4 +248,10 @@ form h1{
     border: solid rgb(247, 67, 97) 2px;
     color:white;
     padding: 5px 0;
+
+}
+
+#accesso:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
 }
