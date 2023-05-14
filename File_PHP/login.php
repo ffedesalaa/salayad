@@ -16,7 +16,7 @@
 
     <main class="main-form">
         <div class="conteiner-form">
-            <form action="../home.php" name="formAccesso" id="formAccesso" method="POST" onsubmit="return formValidation()">
+            <form action="../home.php" name="formLogin" id="formLogin" method="POST" onsubmit="return formValidationL()">
                 <h1>Login</h1>
                 <div class="input-box">
                     <label for="email">Email</label>
@@ -31,9 +31,9 @@
                 </div> 
                 <div class="link-accesso">
                     <a href="">Non ricordo la password</a>
-                    <a href="">Registrati</a>
+                    <a href="signin.php">Registrati</a>
                 </div>
-                <button value="submit" id="accesso">Accedi</button>
+                <button value="submit" id="invio">Accedi</button>
             </form>
         </div>
     </main>
@@ -42,51 +42,6 @@
         <div>Sito fatto dai Salayad</div>
     </footer>
 
-
-
-    <script>
-        function formValidation(){
-            var email = document.forms["formAccesso"]["email"].value;
-            var password = document.forms["formAccesso"]["password"].value;
-            const inputEmail = document.getElementById('email');
-            const inputPassword = document.getElementById('password');
-
-            if(email == "" || password == ""){
-                inputEmail.classList.add('colore-placeholder');
-                inputEmail.placeholder = "Manca l'email";
-
-                inputPassword.classList.add('colore-placeholder');
-                inputPassword.placeholder = 'Manca la password';
-
-                return false;
-            }else{
-                return true;
-            }
-
-                
-        }
-        
-
-         function changePlaceholder(){
-            const inputEmail = document.getElementById('email');
-            inputEmail.classList.remove('colore-placeholder');
-            inputEmail.placeholder = "Inserire l'email";
-
-
-            const inputPassword = document.getElementById('password');
-            inputPassword.classList.remove('colore-placeholder');
-            inputPassword.placeholder = 'Inserire la password';
-         }
-
-         function visibilitaPassword(){
-                var password = document.getElementById("password");
-                if (password.type === "password") {
-                    password.type = "text";
-                } else {
-                    password.type = "password";
-                }
-
-         }
-    </script>
+    <script src=".././File_JS/Form_validation.js"></script>
 </body>
 </html>
