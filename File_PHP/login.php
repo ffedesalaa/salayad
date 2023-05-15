@@ -16,7 +16,7 @@
 
     <main class="main-form">
         <div class="conteiner-form">
-            <form action="../home.php" name="formLogin" id="formLogin" method="POST" onsubmit="return formValidationL()">
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" name="formLogin" id="formLogin" method="POST" onsubmit="return formValidationL()">
                 <p>LOGIN</p>
                 <div class="input-box">
                     <label for="email">Email</label>
@@ -43,5 +43,24 @@
     </footer>
 
     <script src=".././File_JS/Form_validation.js"></script>
+
+    <?php 
+        $db_servername = "localhost";
+        $db_username = "root";
+        $db_password = "";
+        $db_name = "momentum";
+
+        $conn = mysqli_connect($db_servername, $db_username, $db_password, $db_name);
+
+
+        if (!$conn) {
+            die('Connesione al database fallita' . mysqli_connect_error());
+        }
+
+
+        
+   
+
+    ?>
 </body>
 </html>
