@@ -69,7 +69,7 @@ header a{
 }
 
 .login:hover{
-    background: rgb(247, 67, 97);
+    background: linear-gradient(to right, orange, rgb(247, 67, 97));
     transform: scale(1.1);
 }
 
@@ -162,8 +162,7 @@ footer{
     display: flex;
     align-items:  center;
     background: rgb(43, 43, 43);  
-    border:3px solid rgb(247, 67, 97);
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 form{
@@ -173,6 +172,8 @@ form{
     color:white;
     width: 100%;
     padding: 15px 0;
+    border:3px solid rgb(247, 67, 97);
+    border-radius: 20px;
 }
 
 form h1{
@@ -246,7 +247,7 @@ form h1{
     font-size: 20px;
     margin-top: 15px;
     border-radius: 20px;
-    background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    background: rgb(78, 77, 77);
     border: solid rgb(247, 67, 97) 2px;
     color:white;
     padding: 5px 0;
@@ -256,5 +257,6 @@ form h1{
 #invio:hover{
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    background: linear-gradient(to right, orange, rgb(247, 67, 97));
 }
 
