@@ -81,8 +81,6 @@ main{
     min-height: 571px;
     display: flex;
     padding-top: 60px;
-
-
 }
 
 .main__menu{
@@ -125,7 +123,7 @@ main{
 }
 
 #esplora:hover{
-    border-bottom: solid #e57d15 2px;
+    border-bottom: solid #FD8C18 2px;
 }
 
 #seguiti:hover{
