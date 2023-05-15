@@ -72,6 +72,13 @@ function changePlaceholder(){
 
 }
 
+function comparsaInfo(){
+    const condPassword = document.getElementsById('condizioni-password');
+    condPassword.Id.add('display-block');
+    
+
+}
+
 function visibilitaPassword(){
     var password = document.getElementById("password");
     if (password.type === "password") {
