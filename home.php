@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href=""><div class="logo"><b>MOMENTUM</b></div></a>
+        <a href="home.php"><div class="logo"><b>MOMENTUM</b></div></a>
         <div class="barraRicerca">
             <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -27,13 +27,13 @@
             <a href=""><div class="tendina" id="messaggi">MESSAGGI</div></a>
             <a href=""><div class="tendina" id="crea">CREA</div></a>
         </div>
-        <div class="main__pagina">
+        <div class="main__pagina">x
            
         </div>
     </main>
 
     <footer>
-        <div>Sito fatto dai Salayad</div>
+        <div><a>Sito fatto dai Salayad</a></div>
     </footer>
 </body>
 </html>
