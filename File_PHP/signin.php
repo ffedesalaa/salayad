@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<header>
+    
+    <header>
         <a href=""><div class="logo"><b>MOMENTUM</b></div></a>
     </header>
 
     <main class="main-form">
         <div class="conteiner-form" id="form-signin">
-            <form action="../home.php" name="formSignin" id="formSignin" method="POST" onsubmit="return formValidationS()">
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" name="formSignin" id="formSignin" method="POST" onsubmit="return formValidationS()">
                 <p>SIGNIN</p>
                 <div class="input-box">
                     <label for="nome">Nome</label>
@@ -31,16 +32,12 @@
                 <div class="input-box">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="Inserire la password" onclick="changePlaceholder()">
-                    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
                     <button type="button" onclick="visibilitaPassword()" id="eye-outline"><ion-icon name="eye-outline" ></ion-icon></button>
                 </div>
                 
                 <div class="input-box">
                     <label for="password">Conferma Password</label>
                     <input type="password" name="password" id="password" placeholder="Inserire la password" onclick="changePlaceholder()">
-                    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
                     <button type="button" onclick="visibilitaPassword()" id="eye-outline"><ion-icon name="eye-outline" ></ion-icon></button>
                 </div> 
                 <div class="input-box">
@@ -49,6 +46,7 @@
                 </div>
 
                 <button value="submit" id="invio">REGISTRATI</button>
+                
             </form>
         </div>
     </main>
@@ -58,5 +56,49 @@
     </footer>
 
     <script src=".././File_JS/Form_validation.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <?php 
+        $nome = $_POST['nome'];
+        $cognome = $POST['cognome'];
+        $email = $POST['email'];
+        $password = $POST['password'];
+        
+        
+        $db_servername = "localhost";
+        $db_username = "root";
+        $db_password = "";
+        $db_name = "momentum";
+
+        $conn = mysqli_connect($db_servername, $db_username, $db_password, $db_name);
+
+
+        if (!$conn) {
+            die('Connesione al database fallita :' . mysqli_connect_error());
+        }
+
+        $myquery = "SELECT nome
+                    FROM utente
+                    WHERE nome = '".$_POST['']. "'";
+
+        $ris = mysqli_query($conn, $myquery);
+
+        if($ris->num_rows > 0){
+            echo"<script>
+
+                    
+                </script>";
+        }else{
+            $myquery = "SELECT INTO utente (nome, cognome, passoword, numero )
+                        VALUES ($nome, )";
+        }
+    
+        
+
+
+
+
+    ?>
 </body>
 </html>
