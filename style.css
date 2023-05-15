@@ -1,13 +1,32 @@
 *{box-sizing: border-box; margin: 0;}
 
-    
+@font-face {
+    font-family: "fontbold";
+    src: url(FONTS/Ubuntu-Bold.ttf);
+} 
+
+@font-face {
+    font-family: "fontbolditalic";
+    src: url(FONTS/Ubuntu-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "fontregular";
+    src: url(FONTS/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: "fontitalic";
+    src: url(FONTS/Ubuntu-Italic.ttf);
+}
+
 body{
     background: rgb(43, 43, 43);
 }
 
 a{
     text-decoration: none;
-    font-family: Arial;
+    font-family: "fontregular";
 }
 
 header{
@@ -30,7 +49,7 @@ header a{
 
 .logo{
     font-size: 35px;
-    font-family: Arial;
+    font-family: "fontbold";
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,10 +85,12 @@ header a{
     background: rgb(78, 77, 77);
     border: solid rgb(247, 67, 97) 2px;
     transition: transform 0.2s ease-in-out;
+    font-family: "fontregular";
 }
 
 .login:hover{
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    border: solid rgb(78, 77, 77) 2px;
     transform: scale(1.1);
 }
 
@@ -117,29 +138,35 @@ main{
 
 .tendina{
     color:white;
-    font-family: Arial;
+    font-family: "fontregular";
     width: 150px;
     margin-left: 5px;
+    font-size: 17px;
 }
 
 #home:hover{
     border-bottom: solid orange 2px;
+    .icon{color: orange;}
 }
 
 #esplora:hover{
     border-bottom: solid #FD8C18 2px;
+    .icon{color: #FD8C18;}
 }
 
 #seguiti:hover{
     border-bottom: solid #FB752F 2px;
+    .icon{color: #FB752F;}
 }
 
 #messaggi:hover{
     border-bottom: solid #F96143 2px;
+    .icon{color: #F96143;}
 }
 
 #crea:hover{
     border-bottom: solid rgb(247, 67, 97) 2px;
+    .icon{color: rgb(247, 67, 97);}
 }
 
 .main__pagina{
@@ -190,12 +217,13 @@ form{
     padding: 15px 0;
     border:3px solid rgb(247, 67, 97);
     border-radius: 20px;
+    font-family: "fontregular";
 }
 
 form p{
     text-align: center;
     font-size: 45px;
-    font-family: Arial;   
+    font-family: "fontregular";  
 }
 
 .input-box{
@@ -225,6 +253,7 @@ form p{
     color: white;
     font-size: 17px;
     padding-top: 5px;
+    
 }
 
 .input-box input:-webkit-autofill {
@@ -261,8 +290,7 @@ form p{
     background:rgb(226, 132, 44);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 15px;
-  
+    font-size: 15px; 
 }
 
 #invio{
@@ -276,12 +304,13 @@ form p{
     border: solid rgb(247, 67, 97) 2px;
     color:white;
     padding: 5px 0;
-
+    transition: transform 0.2s ease-in-out;
+    font-family: "fontregular";
 }
 
 #invio:hover{
     transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    border: solid rgb(78, 77, 77) 2px;
 }
 
