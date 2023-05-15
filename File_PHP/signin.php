@@ -44,7 +44,7 @@
                     <button type="button" onclick="visibilitaPassword()" id="eye-outline"><ion-icon name="eye-outline" ></ion-icon></button>
                 </div> 
                 <div class="input-box">
-                    <label for="numero">Numero di telefono(facoltativo)</label>
+                    <label for="numero">Numero di telefono (facoltativo)</label>
                     <input type="text" name="numero" id="numero" placeholder="Inserire il numero di telefono" onclick="changePlaceholder()">
                 </div>
 
