@@ -17,7 +17,7 @@
     <main class="main-form">
         <div class="conteiner-form">
             <form action="../home.php" name="formLogin" id="formLogin" method="POST" onsubmit="return formValidationL()">
-                <h1>Login</h1>
+                <h1>LOGIN</h1>
                 <div class="input-box">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" placeholder="Inserire l'email" onclick="changePlaceholder()">
@@ -33,7 +33,7 @@
                     <a href="">Non ricordo la password</a>
                     <a href="signin.php">Registrati</a>
                 </div>
-                <button value="submit" id="invio">Accedi</button>
+                <button value="submit" id="invio">ACCEDI</button>
             </form>
         </div>
     </main>
