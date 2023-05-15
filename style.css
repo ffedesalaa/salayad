@@ -1,13 +1,32 @@
 *{box-sizing: border-box; margin: 0;}
 
-    
+@font-face {
+    font-family: "fontbold";
+    src: url(FONTS/Ubuntu-Bold.ttf);
+} 
+
+@font-face {
+    font-family: "fontbolditalic";
+    src: url(FONTS/Ubuntu-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "fontregular";
+    src: url(FONTS/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: "fontitalic";
+    src: url(FONTS/Ubuntu-Italic.ttf);
+}
+
 body{
     background: rgb(43, 43, 43);
 }
 
 a{
     text-decoration: none;
-    font-family: Arial;
+    font-family: "fontregular";
 }
 
 header{
@@ -30,7 +49,7 @@ header a{
 
 .logo{
     font-size: 35px;
-    font-family: Arial;
+    font-family: "fontbold";
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,6 +85,7 @@ header a{
     background: rgb(78, 77, 77);
     border: solid rgb(247, 67, 97) 2px;
     transition: transform 0.2s ease-in-out;
+    font-family: "fontregular";
 }
 
 .login:hover{
@@ -118,9 +138,10 @@ main{
 
 .tendina{
     color:white;
-    font-family: Arial;
+    font-family: "fontregular";
     width: 150px;
     margin-left: 5px;
+    font-size: 17px;
 }
 
 #home:hover{
@@ -196,12 +217,13 @@ form{
     padding: 15px 0;
     border:3px solid rgb(247, 67, 97);
     border-radius: 20px;
+    font-family: "fontregular";
 }
 
 form p{
     text-align: center;
     font-size: 45px;
-    font-family: Arial;   
+    font-family: "fontregular";  
 }
 
 .input-box{
@@ -231,6 +253,7 @@ form p{
     color: white;
     font-size: 17px;
     padding-top: 5px;
+    
 }
 
 .input-box input:-webkit-autofill {
@@ -267,8 +290,7 @@ form p{
     background:rgb(226, 132, 44);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 15px;
-  
+    font-size: 15px; 
 }
 
 #invio{
@@ -283,6 +305,7 @@ form p{
     color:white;
     padding: 5px 0;
     transition: transform 0.2s ease-in-out;
+    font-family: "fontregular";
 }
 
 #invio:hover{
