@@ -15,7 +15,7 @@
     <main class="main-form">
         <div class="conteiner-form" id="form-signin">
             <form action="../home.php" name="formSignin" id="formSignin" method="POST" onsubmit="return formValidationS()">
-                <h1>Signin</h1>
+                <p>SIGNIN</p>
                 <div class="input-box">
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" placeholder="Inserire il nome" onclick="changePlaceholder()">
@@ -44,11 +44,11 @@
                     <button type="button" onclick="visibilitaPassword()" id="eye-outline"><ion-icon name="eye-outline" ></ion-icon></button>
                 </div> 
                 <div class="input-box">
-                    <label for="numero">Numero di telefono(facoltativo)</label>
+                    <label for="numero">Numero di telefono (facoltativo)</label>
                     <input type="text" name="numero" id="numero" placeholder="Inserire il numero di telefono" onclick="changePlaceholder()">
                 </div>
 
-                <button value="submit" id="invio">Registrati</button>
+                <button value="submit" id="invio">REGISTRATI</button>
             </form>
         </div>
     </main>

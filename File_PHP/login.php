@@ -17,7 +17,7 @@
     <main class="main-form">
         <div class="conteiner-form">
             <form action="../home.php" name="formLogin" id="formLogin" method="POST" onsubmit="return formValidationL()">
-                <h1>LOGIN</h1>
+                <p>LOGIN</p>
                 <div class="input-box">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" placeholder="Inserire l'email" onclick="changePlaceholder()">

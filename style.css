@@ -89,21 +89,35 @@ main{
     background: rgb(43, 43, 43);;
     width: 250px;
     border-right: solid rgb(78, 77, 77) 2px;
-    height: 700px;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.main__menu__selezione{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-bottom: solid rgb(78, 77, 77) 2px;
+}
 
+.icon{
+    color: #fff;
+    margin-left: 5px; 
+}
+
+.icon ion-icon{
+    font-size: 22px;
 }
 
 .tendina{
     color:white;
     font-family: Arial;
     width: 150px;
-    text-align: left;
-    margin: 0 auto; 
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-bottom: solid rgb(78, 77, 77) 2px;
+    margin-left: 5px;
 }
 
 #home:hover{
@@ -176,9 +190,10 @@ form{
     border-radius: 20px;
 }
 
-form h1{
+form p{
     text-align: center;
-    font-size: 45px
+    font-size: 45px;
+    font-family: Arial;   
 }
 
 .input-box{
@@ -241,7 +256,7 @@ form h1{
 }
 
 .link-accesso a{
-    background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    background:rgb(226, 132, 44);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 15px;

@@ -21,13 +21,60 @@
     </header>
     <main>
         <div class="main__menu">
-            <a href=""><div class="tendina" id="home">HOME</div></a>
-            <a href=""><div class="tendina" id="esplora">ESPLORA</div></a>
-            <a href=""><div class="tendina" id="seguiti">SEGUITI</div></a>
-            <a href=""><div class="tendina" id="messaggi">MESSAGGI</div></a>
-            <a href=""><div class="tendina" id="crea">CREA</div></a>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <a href="">
+                <div class="main__menu__selezione" id="home">
+                    <div class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <div class="tendina">
+                        HOME
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="main__menu__selezione" id="esplora">
+                    <div class="icon">
+                        <ion-icon name="globe-outline"></ion-icon>
+                    </div>
+                    <div class="tendina">
+                        ESPLORA
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="main__menu__selezione" id="seguiti">
+                    <div class="icon">
+                        <ion-icon name="accessibility-outline"></ion-icon>
+                    </div>
+                    <div class="tendina">
+                        SEGUITI
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="main__menu__selezione" id="messaggi">
+                    <div class="icon">
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                    </div>
+                    <div class="tendina">
+                        MESSAGGI
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="main__menu__selezione" id="crea">
+                    <div class="icon">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </div>
+                    <div class="tendina">
+                        CREA
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="main__pagina">x
+        <div class="main__pagina">
            
         </div>
     </main>
