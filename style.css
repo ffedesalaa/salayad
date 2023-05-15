@@ -93,20 +93,14 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100%;
-    padding-bottom:60% ;
 }
-
-.main__menu a{
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
 
 .main__menu__selezione{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 5px;
     border-bottom: solid rgb(78, 77, 77) 2px;
 }
 
