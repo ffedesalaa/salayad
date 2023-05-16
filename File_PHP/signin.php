@@ -1,3 +1,12 @@
+<?php
+  if(isset($_POST['nome'])) $nome = $_POST['nome'];  else $nome = "";     
+  if(isset($_POST['cognome'])) $cognome = $_POST['cognome'];  else $cognome = "";     
+  if(isset($_POST['email'])) $email = $_POST['email'];  else $email = "";     
+  if(isset($_POST['password'])) $password = $_POST['password'];  else $password = "";     
+  if(isset($_POST['numero'])) $numero= $_POST['numero'];  else $numero = "";     
+?>
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -36,8 +45,8 @@
                 </div>
                 
                 <div class="input-box">
-                    <label for="password">Conferma Password</label>
-                    <input type="password" name="password" id="password" placeholder="Inserire la password" onclick="changePlaceholder()">
+                    <label for="conferma">Conferma Password</label>
+                    <input type="password" name="conferma" id="conferma" placeholder="Inserire la password" onclick="changePlaceholder()">
                     <button type="button" onclick="visibilitaPassword()" id="eye-outline"><ion-icon name="eye-outline" ></ion-icon></button>
                 </div> 
                 <div class="input-box">
@@ -51,54 +60,50 @@
         </div>
     </main>
     
-    <footer>
-        <div>Sito fatto dai Salayad</div>
-    </footer>
+    
 
     <script src=".././File_JS/Form_validation.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <?php 
-        $nome = $_POST['nome'];
-        $cognome = $POST['cognome'];
-        $email = $POST['email'];
-        $password = $POST['password'];
+        if(isset($_POST['nome']) AND isset($_POST['cognome']) AND isset($_POST['email']) AND isset($_POST['password']) ){
+
+            $conn = new mysqli("localhost","root", "", "momentum");
+
+            if (!$conn) {
+                die('Connesione al database fallita :' . mysqli_connect_error());
+            }else{
+                $myquery = "SELECT email
+                        FROM utente
+                        WHERE email = '".$email. "'";
+
+                $ris = $conn->query($myquery);
+              
+                if($ris->num_rows > 0){
+                echo "popipopipppppppp";
+                }else{
+                    $myquery = "INSERT INTO utente (Nome, Cognome, Email, Password, Numero )
+                                VALUES ('$nome', '$cognome', '$email', '$password', '$numero' )";
+                
         
-        
-        $db_servername = "localhost";
-        $db_username = "root";
-        $db_password = "";
-        $db_name = "momentum";
+                    if($conn->query($myquery) === true){
+                        session_start();
+                        $_SESSION['nome'] = $nome;
+                        $_SESSION['cognome'] = $cognome;
+                        $_SESSION['email'] = $email;
+                        $_SESSION['password'] = $password;
+                        $_SESSION['numero'] = $numero;
 
-        $conn = mysqli_connect($db_servername, $db_username, $db_password, $db_name);
+                        $conn->close();
+                    }
+                }
+            }
 
-
-        if (!$conn) {
-            die('Connesione al database fallita :' . mysqli_connect_error());
         }
-
-        $myquery = "SELECT nome
-                    FROM utente
-                    WHERE nome = '".$_POST['']. "'";
-
-        $ris = mysqli_query($conn, $myquery);
-
-        if($ris->num_rows > 0){
-            echo"<script>
-
-                    
-                </script>";
-        }else{
-            $myquery = "SELECT INTO utente (nome, cognome, passoword, numero )
-                        VALUES ($nome, )";
-        }
-    
-        
-
-
-
-
-    ?>
+?>
+    <footer>
+        <div>Sito fatto dai Salayad</div>
+    </footer>
 </body>
 </html>
