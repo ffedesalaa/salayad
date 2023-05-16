@@ -90,6 +90,9 @@
                 <div class="main__pagina__fotoprofilo">
                     
                 </div>
+                <div class="main__pagina__profilo__info" id="nickname">
+                    <p>ffedesalaa</p>
+                </div>
             </div>
         </div>
     </main>
