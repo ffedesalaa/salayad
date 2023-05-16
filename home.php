@@ -75,7 +75,22 @@
             </a>
         </div>
         <div class="main__pagina">
-           
+            <div class="main__pagina__post">
+                <div class="post">
+                    <p>fffffffffffffff</p>
+                </div>
+                <div class="post">
+                    <p>fffffffffffffff</p>
+                </div>
+                <div class="post">
+                    <p>fffffffffffffff</p>
+                </div>
+            </div>
+            <div class="main__pagina__profilo">
+                <div class="main__pagina__fotoprofilo">
+                    
+                </div>
+            </div>
         </div>
     </main>
 
