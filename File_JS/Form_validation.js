@@ -25,10 +25,12 @@ function formValidationS(){
     var cognome = document.forms["formSignin"]["cognome"].value;
     var email = document.forms["formSignin"]["email"].value;
     var password = document.forms["formSignin"]["password"].value;
+    var conferma = document.forms["formSignin"]["conferma"].value;
     const inputNome = document.getElementById('nome');
     const inputCognome = document.getElementById('cognome');
     const inputEmail = document.getElementById('email');
     const inputPassword = document.getElementById('password');
+    const inputConferma = document.getElementById('conferma');
 
     if(nome === "" || cognome === ""|| email === "" || password === ""){
 
@@ -45,12 +47,20 @@ function formValidationS(){
         inputPassword.placeholder = 'Manca la password';
 
         return false;
+    } 
+    if(password != conferma){
+
+        var labelPass = document.getElementById('labelPass');
+        labelPass.innerHTML="Password (le password non corrispondono)";
+        labelPass.style.color = "red";
+        return false;
     }
     else{
         return true;
     }            
 }
-        
+
+  
 
 function changePlaceholder(){
     
@@ -72,19 +82,25 @@ function changePlaceholder(){
 
 }
 
-function comparsaInfo(){
-    const condPassword = document.getElementsById('condizioni-password');
-    condPassword.Id.add('display-block');
-    
 
-}
 
 function visibilitaPassword(){
     var password = document.getElementById("password");
-    if (password.type === "password") {
+    var conferma = document.getElementById("conferma");
+    if (password.type === "password" || conferma.type ==="password") {
         password.type = "text";
+        conferma.type ="text";
     }else {
         password.type = "password";
+        conferma.type ="password";
     }
 
+    
+        
+}
+
+function changeLabel(){
+    var labelPass = document.getElementById('labelPass');
+    labelPass.innerHTML="Password";
+    labelPass.style.color = "white";
 }

@@ -39,8 +39,8 @@
                     <input type="text" name="email" id="email" placeholder="Inserire l'email" onclick="changePlaceholder()">
                 </div>
                 <div class="input-box">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Inserire la password" onclick="changePlaceholder()">
+                    <label for="password" id="labelPass">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Inserire la password" onclick="changePlaceholder();changeLabel();">
                     <button type="button" onclick="visibilitaPassword()" id="eye-outline"><ion-icon name="eye-outline" ></ion-icon></button>
                 </div>
                 
@@ -81,7 +81,7 @@
                 $ris = $conn->query($myquery);
               
                 if($ris->num_rows > 0){
-                echo "popipopipppppppp";
+                 
                 }else{
                     $myquery = "INSERT INTO utente (Nome, Cognome, Email, Password, Numero )
                                 VALUES ('$nome', '$cognome', '$email', '$password', '$numero' )";
@@ -105,5 +105,7 @@
     <footer>
         <div>Sito fatto dai Salayad</div>
     </footer>
+
+
 </body>
 </html>
