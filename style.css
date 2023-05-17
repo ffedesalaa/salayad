@@ -142,6 +142,7 @@ main{
     width: 150px;
     margin-left: 5px;
     font-size: 17px;
+    
 }
 
 #home:hover{
@@ -203,7 +204,7 @@ main{
     margin: 20px;
     margin-right: 30px;
     margin-left: 10px;
-    height: 500px;
+    height: 300px;
     position: fixed;
     right: 0;
     display: flex;
@@ -215,9 +216,10 @@ main{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-image: url("prof.JPG");
-    background-size: 100% 115%;
+    background-image: url("profilo.png");
+    background-size: 120% 115%;
     background-repeat: no-repeat;
+    background-position: -18px;
     border: solid rgb(78, 77, 77) 4px;
     margin: 0 auto;
     margin-top: 20px;
@@ -230,8 +232,38 @@ main{
     text-align: center;
     margin-top: 10px;
     font-family: "fontregular";
-    font-size: 25px;
+    font-size: 20px;
     border-bottom: solid rgb(78, 77, 77) 2px;
+}
+
+.main__pagina__profilo__registrati{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    display: block;
+}
+
+#signin{
+    cursor: pointer;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background: rgb(78, 77, 77);
+    border: solid rgb(247, 67, 97) 2px;
+    color:white;
+    padding: 5px 0;
+    transition: transform 0.2s ease-in-out;
+    font-family: "fontregular";
+}
+
+#signin:hover{
+    transform: scale(1.1);
+    background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    border: solid rgb(78, 77, 77) 2px;
 }
 
 footer{
