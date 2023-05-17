@@ -23,7 +23,7 @@
         <div class="main__menu">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-            <a href="">
+            <a href="File_PHP/login.php">
                 <div class="main__menu__selezione" id="home">
                     <div class="icon">
                         <ion-icon name="home-outline"></ion-icon>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </a>
-            <a href="">
+            <a href="File_PHP/login.php">
                 <div class="main__menu__selezione" id="esplora">
                     <div class="icon">
                         <ion-icon name="globe-outline"></ion-icon>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </a>
-            <a href="">
+            <a href="File_PHP/login.php">
                 <div class="main__menu__selezione" id="seguiti">
                     <div class="icon">
                         <ion-icon name="accessibility-outline"></ion-icon>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </a>
-            <a href="">
+            <a href="File_PHP/login.php">
                 <div class="main__menu__selezione" id="messaggi">
                     <div class="icon">
                         <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </a>
-            <a href="">
+            <a href="File_PHP/login.php">
                 <div class="main__menu__selezione" id="crea">
                     <div class="icon">
                         <ion-icon name="add-circle-outline"></ion-icon>
@@ -77,13 +77,13 @@
         <div class="main__pagina">
             <div class="main__pagina__post">
                 <div class="post">
-                    <p>fffffffffffffff</p>
+                    
                 </div>
                 <div class="post">
-                    <p>fffffffffffffff</p>
+                    
                 </div>
                 <div class="post">
-                    <p>fffffffffffffff</p>
+                    
                 </div>
             </div>
             <div class="main__pagina__profilo">
@@ -99,7 +99,7 @@
     </main>
 
     <footer>
-        <div><a>Sito fatto dai Salayad</a></div>
+        <div><a>Ahmad Fayad - Federico Sala</a></div>
     </footer>
 </body>
 </html>
