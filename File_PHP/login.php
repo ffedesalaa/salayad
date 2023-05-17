@@ -28,7 +28,7 @@
             <form action="<?php $_SERVER['PHP_SELF'] ?>" name="formLogin" id="formLogin" method="POST" onsubmit="return formValidationL()">
                 <p>LOGIN</p>
                 <div class="input-box">
-                    <label for="email">Email</label>
+                    <label for="email" id="labelEmail">Email</label>
                     <input type="text" name="email" id="email" placeholder="Inserire l'email" onclick="changePlaceholder()">
                 </div>
                 <div class="input-box">
