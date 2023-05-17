@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    if(isset($_SESSION['nome'])) $nome = $_SESSION['nome'];  else $nome = "";     
+    if(isset($_SESSION['cognome'])) $cognome = $_SESSION['cognome'];  else $cognome = "";     
+    if(isset($_SESSION['username'])) $username = $_SESSION['username']; else $username = "";
+    if(isset($_SESSION['email'])) $email = $_SESSION['email'];  else $email = "";     
+    if(isset($_SESSION['password'])) $password = $_SESSION['password'];  else $password = "";     
+    if(isset($_SESSION['numero'])) $numero = $_SESSION['numero'];  else $numero = "";  
+    if(isset($_SESSION['accesso'])) $accesso = $_SESSION['accesso']; else $accesso= false;
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -16,14 +27,22 @@
             <input type="text" name="barra" id="barra" placeholder="Cerca">
             <ion-icon name="search-outline" id="search-outline"></ion-icon>
         </div>
-      
-        <a href="./File_PHP/login.php"><div class="login"><b>LOGIN</b></div></a>
+        <?php 
+        if($accesso === true){
+            echo '<a href="./File_PHP/logout.php"><div class="login"><b>LOGOUT</b></div></a>';
+
+        }
+        else{
+            echo'<a href="./File_PHP/login.php"><div class="login"><b>LOGIN</b></div></a>';
+        }
+        ?>
+
     </header>
     <main>
         <div class="main__menu">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-            <a href="File_PHP/login.php">
+            <a href="home.php">
                 <div class="main__menu__selezione" id="home">
                     <div class="icon">
                         <ion-icon name="home-outline"></ion-icon>
@@ -33,7 +52,8 @@
                     </div>
                 </div>
             </a>
-            <a href="File_PHP/login.php">
+
+            <a href="File_PHP/esplora.php">
                 <div class="main__menu__selezione" id="esplora">
                     <div class="icon">
                         <ion-icon name="globe-outline"></ion-icon>
@@ -43,7 +63,7 @@
                     </div>
                 </div>
             </a>
-            <a href="File_PHP/login.php">
+            <a href="File_PHP/seguiti.php">
                 <div class="main__menu__selezione" id="seguiti">
                     <div class="icon">
                         <ion-icon name="accessibility-outline"></ion-icon>
@@ -53,7 +73,7 @@
                     </div>
                 </div>
             </a>
-            <a href="File_PHP/login.php">
+            <a href="File_PHP/messaggi.php">
                 <div class="main__menu__selezione" id="messaggi">
                     <div class="icon">
                         <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
@@ -63,7 +83,7 @@
                     </div>
                 </div>
             </a>
-            <a href="File_PHP/login.php">
+            <a href="File_PHP/crea.php">
                 <div class="main__menu__selezione" id="crea">
                     <div class="icon">
                         <ion-icon name="add-circle-outline"></ion-icon>
