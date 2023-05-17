@@ -49,7 +49,7 @@
                         <ion-icon name="accessibility-outline"></ion-icon>
                     </div>
                     <div class="tendina">
-                        AMICI
+                        AMICI                                                           
                     </div>
                 </div>
             </a>
