@@ -1,3 +1,12 @@
+<?php
+    if(isset($_POST['nome'])) $nome = $_POST['nome'];  else $nome = "";     
+    if(isset($_POST['cognome'])) $cognome = $_POST['cognome'];  else $cognome = "";     
+    if(isset($_POST['username'])) $username = $_POST['username']; else $username = "";
+    if(isset($_POST['email'])) $email = $_POST['email'];  else $email = "";     
+    if(isset($_POST['password'])) $password = $_POST['password'];  else $password = "";     
+    if(isset($_POST['numero'])) $numero= $_POST['numero'];  else $numero = "";  
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -44,23 +53,55 @@
 
     <script src=".././File_JS/Form_validation.js"></script>
 
-    <?php 
-        $db_servername = "localhost";
-        $db_username = "root";
-        $db_password = "";
-        $db_name = "momentum";
+    <?php     
+        if(isset($_POST['email']) AND isset($_POST['password']) ){
 
-        $conn = mysqli_connect($db_servername, $db_username, $db_password, $db_name);
+            $conn = new mysqli("localhost","root", "", "momentum");
 
+            if ($conn->connect_error) {
+                die("<p>Connesione al database fallita : ".$conn->connect_error."</p>");
+            }else{
+                $myquery = "SELECT Nome, Cognome, Username, Email, Password, Numero
+							FROM utente 
+							WHERE Email='$email'
+							    AND Password='$password'
+                                ";
+                $ris = $conn->query($myquery);
 
-        if (!$conn) {
-            die('Connesione al database fallita' . mysqli_connect_error());
+                if($ris->num_rows == 0){
+                    die("<script>
+                            var labelEmail = document.getElementById('labelEmail');
+                            labelEmail.innerHTML='Utente non trovato';
+                            labelEmail.style.color = 'red';
+                        </script>");
+                }elseif($ris->num_rows >0) {
+                    $informazioni = array();
+                    while ($row = $ris->fetch_assoc()) {
+                        $informazioni[] = $row;
+                    }
+                }
+                    session_start();
+                    $_SESSION['nome'] = $informazioni[0]['Nome'];
+                    $_SESSION['cognome'] = $informazioni[0]['Cognome'];
+                    $_SESSION['username'] = $informazioni[0]['Username'];
+                    $_SESSION['email'] = $email;
+                    $_SESSION['password'] = $password;
+                    $_SESSION['numero'] = $informazioni[0]['Numero'];
+                    $_SESSION['accesso'] = true;
+                    $conn->close();
+
+                    header("Refresh: 5; URL=../home.php");             
+                
+
+            }
         }
+?>
+        
 
 
         
    
 
-    ?>
+
 </body>
 </html>
