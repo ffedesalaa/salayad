@@ -24,9 +24,9 @@
     </header>
 
     <main class="main-form">
-        <div class="conteiner-form">
+        <div class="conteiner-form" id="form-login">
             <form action="<?php $_SERVER['PHP_SELF'] ?>" name="formLogin" id="formLogin" method="POST" onsubmit="return formValidationL()">
-                <p>LOGIN</p>
+                <h1>LOGIN</h1>
                 <div class="input-box">
                     <label for="email" id="labelEmail">Email</label>
                     <input type="text" name="email" id="email" placeholder="Inserire l'email" onclick="changePlaceholder()">
@@ -44,6 +44,10 @@
                 </div>
                 <button value="submit" id="invio">ACCEDI</button>
             </form>
+            <div class="conteiner-form__messaggio" id="messaggioAccesso">
+                <div class="conteiner-form__messaggio__img"><img src="../Immagini/check.png" alt="check"></div>
+                <p>Accesso effetuato con successo</p>
+            </div>
         </div>
     </main>
     
@@ -88,9 +92,20 @@
                     $_SESSION['password'] = $password;
                     $_SESSION['numero'] = $informazioni[0]['Numero'];
                     $_SESSION['accesso'] = true;
+
+                    echo "   <script>
+                    var log = document.getElementById('formLogin');
+                    log.style.display = 'none';
+                    var contLog = document.getElementById('form-login')
+                    contLog.style.border = '4px solid rgb(247, 67, 97)';
+                    var mesAccesso = document.getElementById('messaggioAccesso');
+                    mesAccesso.style.display = 'block';
+                    
+                    </script>";
+
                     $conn->close();
 
-                    header("Refresh: 5; URL=../home.php");             
+                    header("Refresh: 2; URL=../home.php");             
                 
 
             }

@@ -289,12 +289,14 @@ footer{
 
 .conteiner-form{
     width: 400px;
-    height: auto;
+    min-height: 290.8px;
     display: flex;
     align-items:  center;
     background: rgb(43, 43, 43);  
     border-radius: 20px;
 }
+    
+
 
 form{
     display: flex;
@@ -308,7 +310,7 @@ form{
     font-family: "fontregular";
 }
 
-form p{
+form h1{
     text-align: center;
     font-size: 45px;
     font-family: "fontregular";  
@@ -402,3 +404,21 @@ form p{
     border: solid rgb(78, 77, 77) 2px;
 }
 
+.conteiner-form__messaggio{
+    width: 100%;
+    display: none;
+}
+.conteiner-form__messaggio__img{
+    width: 50%;
+    margin: 0 auto;
+}
+.conteiner-form__messaggio__img img{
+    width: 100%;
+}
+
+.conteiner-form__messaggio p{
+    font-size: 23px;
+    color: white;
+    text-align: center;
+
+}
