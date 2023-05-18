@@ -110,10 +110,20 @@
                 <div class="main__pagina__fotoprofilo">
                     
                 </div>
-                <div class="main__pagina__profilo__info" id="nickname">
-                    <p>Non hai un account?</p>
+                <div class="main__pagina__profilo__username" id="nickname">
+                    <b><p>
+                        <?php
+                            echo "@". $username;
+                        ?>
+                    </p></b>
                 </div>
-                <a href="File_PHP/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin"><b>SIGNIN</b></button></a>
+                <div class="main__pagina__profilo__info" id="profilo">
+                    <a href="">PROFILO</a>
+                </div>
+                <div class="main__pagina__profilo__info" id="modifica">
+                    <a href="">MODIFICA</a>
+                </div>
+                    
             </div>
         </div>
     </main>

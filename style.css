@@ -142,6 +142,7 @@ main{
     width: 150px;
     margin-left: 5px;
     font-size: 17px;
+    height: 100%;
     
 }
 
@@ -204,7 +205,7 @@ main{
     margin: 20px;
     margin-right: 30px;
     margin-left: 10px;
-    height: 300px;
+    height: 320px;
     position: fixed;
     right: 0;
     display: flex;
@@ -225,15 +226,41 @@ main{
     margin-top: 20px;
 }
 
-.main__pagina__profilo__info{
+#linkArea{
+    display: block;
+    margin: 0 auto;
+}
+
+.main__pagina__profilo__username{
     width: 75%;
     color: #fff;
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
     font-family: "fontregular";
-    font-size: 20px;
+    font-size: 30px;
+    border-bottom: solid rgb(78, 77, 77) 3px;
+    text-decoration: none;
+}
+
+.main__pagina__profilo__info{
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    font-size: 17px;
     border-bottom: solid rgb(78, 77, 77) 2px;
+}
+
+.main__pagina__profilo__info:hover{
+    border-bottom: solid rgb(247, 67, 97) 2px;
+}
+
+.main__pagina__profilo__info a{
+    color: #fff;
 }
 
 .main__pagina__profilo__registrati{
