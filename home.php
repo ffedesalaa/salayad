@@ -42,7 +42,7 @@
         <div class="main__menu">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-            <a href="home.php">
+            <a href="home.php" id="linkHome">
                 <div class="main__menu__selezione" id="home">
                     <div class="icon">
                         <ion-icon name="home-outline"></ion-icon>
@@ -53,7 +53,7 @@
                 </div>
             </a>
 
-            <a href="File_PHP/esplora.php">
+            <a href="File_PHP/esplora.php" id="linkEsplora">
                 <div class="main__menu__selezione" id="esplora">
                     <div class="icon">
                         <ion-icon name="globe-outline"></ion-icon>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </a>
-            <a href="File_PHP/seguiti.php">
+            <a href="File_PHP/seguiti.php" id="linkSeguiti">
                 <div class="main__menu__selezione" id="seguiti">
                     <div class="icon">
                         <ion-icon name="accessibility-outline"></ion-icon>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </a>
-            <a href="File_PHP/messaggi.php">
+            <a href="File_PHP/messaggi.php" id="linkMessaggi">
                 <div class="main__menu__selezione" id="messaggi">
                     <div class="icon">
                         <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </a>
-            <a href="File_PHP/crea.php">
+            <a href="File_PHP/crea.php" id="linkCrea">
                 <div class="main__menu__selezione" id="crea">
                     <div class="icon">
                         <ion-icon name="add-circle-outline"></ion-icon>
@@ -121,5 +121,18 @@
     <footer>
         <div><a>Ahmad Fayad - Federico Sala</a></div>
     </footer>
+    <script>
+        <?php 
+        if($accesso === false):
+        ?>
+        var linkEsplora = document.getElementById('linkEsplora');
+        var linkSeguiti = document.getElementById('linkSeguiti');
+        var linkMessaggi = document.getElementById('linkMessaggi');
+        var linkCrea = document.getElementById('linkCrea');
+        linkEsplora.href = linkSeguiti.href =  linkMessaggi.href =  linkCrea. href= "File_PHP/login.php";
+        <?php 
+        endif
+        ?>
+    </script>
 </body>
 </html>

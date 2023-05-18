@@ -27,7 +27,7 @@
     <main class="main-form">
         <div class="conteiner-form" id="form-signin">
             <form action="<?php $_SERVER['PHP_SELF'] ?>" name="formSignin" id="formSignin" method="POST" onsubmit="return formValidationS()">
-                <p>SIGNIN</p>
+                <h1>SIGNIN</h1>
                 <div class="input-box">
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" placeholder="Inserire il nome" onclick="changePlaceholder()">
@@ -63,6 +63,10 @@
                 <button value="submit" id="invio">REGISTRATI</button>
                 
             </form>
+            <div class="conteiner-form__messaggio" id="messaggioRegistrazione">
+                <div class="conteiner-form__messaggio__img"><img src="../Immagini/check.png" alt="check"></div>
+                <p>Registrazione effetuata con successo</p>
+            </div>
         </div>
     </main>
     
@@ -138,8 +142,18 @@
                         $_SESSION['numero'] = $numero;
                         $_SESSION['accesso'] = true;
 
+                        echo "   <script>
+                        var sign = document.getElementById('formSignin');
+                        sign.style.display = 'none';
+                        var contSign= document.getElementById('form-signin');
+                        contSign.style.border = '4px solid rgb(247, 67, 97)';
+                        var mesRegistrazione = document.getElementById('messaggioRegistrazione');
+                        mesRegistrazione.style.display = 'block';
+                        
+                        </script>";
+
                         $conn->close();
-                        header('Refresh: 5; URL=../home.php');
+                        header('Refresh: 2; URL=../home.php');
 
 
                     }
@@ -151,5 +165,6 @@
     <footer>
         <div>Sito fatto dai Salayad</div>
     </footer>
+
 </body>
 </html>
