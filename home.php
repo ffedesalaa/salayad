@@ -119,7 +119,7 @@
                     </p></b>
                 </div>
                 <div class="main__pagina__profilo__info" id="profilo">
-                    <a href="">PROFILO</a>
+                    <a href="File_PHP/profilo.php">PROFILO</a>
                 </div>
                 <div class="main__pagina__profilo__info" id="modifica">
                     <a href="">MODIFICA</a>
