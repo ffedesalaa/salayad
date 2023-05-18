@@ -242,6 +242,20 @@ main{
     border-bottom: solid rgb(78, 77, 77) 3px;
     text-decoration: none;
 }
+.main__pagina__profilo__mess{
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    color : #fff;
+    font-family: "fontregular";
+    font-size: 19px;
+    border-bottom: solid rgb(78, 77, 77) 2px;
+
+}
 
 .main__pagina__profilo__info{
     text-align: center;
@@ -351,6 +365,10 @@ form h1{
     margin-top: 15px;
     position: relative ;
 }
+.input-boxnc{
+    width:50%
+}
+
 
 
 .input-box label{
@@ -371,6 +389,9 @@ form h1{
     font-size: 17px;
     padding-top: 5px;
     
+}
+.input-boxnc input{
+    width: 90%;
 }
 
 .input-box input:-webkit-autofill {
