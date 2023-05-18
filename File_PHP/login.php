@@ -91,7 +91,7 @@
                     $_SESSION['email'] = $email;
                     $_SESSION['password'] = $password;
                     $_SESSION['numero'] = $informazioni[0]['Numero'];
-                    $_SESSION['accesso'] = true;
+                    $_SESSION['accesso'] = true; 
 
                     echo "   <script>
                     var log = document.getElementById('formLogin');

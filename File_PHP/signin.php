@@ -37,8 +37,6 @@
                         <label for="cognome">Cognome</label>
                         <input type="text" name="cognome" id="cognome" placeholder="Inserire il cognome" onclick="changePlaceholder()">
                     </div>
-                    
-                    <input type="file">
                 </div>
                 
                 <div class="input-box">
@@ -146,7 +144,8 @@
                         $_SESSION['password'] = $password;
                         $_SESSION['numero'] = $numero;
                         $_SESSION['accesso'] = true;
-
+                        
+                        header("Refresh: 2; URL=../home.php"); 
                         echo "   <script>
                         var sign = document.getElementById('formSignin');
                         sign.style.display = 'none';
@@ -158,7 +157,8 @@
                         </script>";
 
                         $conn->close();
-                        header('Refresh: 2; URL=../home.php');
+                                   
+
 
 
                     }
