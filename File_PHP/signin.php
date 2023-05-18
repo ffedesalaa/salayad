@@ -28,14 +28,19 @@
         <div class="conteiner-form" id="form-signin">
             <form action="<?php $_SERVER['PHP_SELF'] ?>" name="formSignin" id="formSignin" method="POST" onsubmit="return formValidationS()">
                 <h1>SIGNIN</h1>
-                <div class="input-box">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Inserire il nome" onclick="changePlaceholder()">
+                <div class="gg">
+                    <div class="input-box input-boxnc">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Inserire il nome" onclick="changePlaceholder()">
+                    </div>
+                    <div class="input-box input-boxnc">
+                        <label for="cognome">Cognome</label>
+                        <input type="text" name="cognome" id="cognome" placeholder="Inserire il cognome" onclick="changePlaceholder()">
+                    </div>
+                    
+                    <input type="file">
                 </div>
-                <div class="input-box">
-                    <label for="cognome">Cognome</label>
-                    <input type="text" name="cognome" id="cognome" placeholder="Inserire il cognome" onclick="changePlaceholder()">
-                </div>
+                
                 <div class="input-box">
                     <label for="username" id="labelUsername">Username</label>
                     <input type="text" name="username" id="username" placeholder="Inserire lo username" onclick="changePlaceholder()">
