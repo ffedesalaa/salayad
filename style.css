@@ -242,6 +242,20 @@ main{
     border-bottom: solid rgb(78, 77, 77) 3px;
     text-decoration: none;
 }
+.main__pagina__profilo__mess{
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    color : #fff;
+    font-family: "fontregular";
+    font-size: 17px;
+    border-bottom: solid rgb(78, 77, 77) 2px;
+
+}
 
 .main__pagina__profilo__info{
     text-align: center;

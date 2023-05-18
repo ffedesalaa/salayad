@@ -106,15 +106,16 @@
                     
                 </div>
             </div>
-            <div class="main__pagina__profilo">
+            <?php if($accesso === true){
+                echo '<div class="main__pagina__profilo">
                 <div class="main__pagina__fotoprofilo">
                     
                 </div>
                 <div class="main__pagina__profilo__username" id="nickname">
                     <b><p>
-                        <?php
-                            echo "@". $username;
-                        ?>
+                        
+                             @'. $username. '
+                        
                     </p></b>
                 </div>
                 <div class="main__pagina__profilo__info" id="profilo">
@@ -124,7 +125,27 @@
                     <a href="">MODIFICA</a>
                 </div>
                     
-            </div>
+            </div>';
+            }
+
+            else{
+                echo '  <div class="main__pagina__profilo" id="main__pagina__profiloid">
+                            <div class="main__pagina__fotoprofilo">
+                                
+                            </div>
+                            <div class="main__pagina__profilo__mess">
+                                <p>Non hai un account?</p>
+                            </div>
+                            <a href="File_PHP/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin"><b>SIGNIN</b></button></a>
+                        </div>
+                        <script>
+                            var x = document.getElementById("main__pagina__profiloid");
+                            x.style.height = "300px"
+                        </script>';
+                
+            }
+            ?>
+            
         </div>
     </main>
 
