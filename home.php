@@ -113,7 +113,7 @@
                 <div class="main__pagina__profilo__info" id="nickname">
                     <p>Non hai un account?</p>
                 </div>
-                <a href="File_PHP/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin">SIGNIN</button></a>
+                <a href="File_PHP/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin"><b>SIGNIN</b></button></a>
             </div>
         </div>
     </main>
