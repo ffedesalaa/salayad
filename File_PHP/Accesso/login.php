@@ -15,12 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     
 </head>
 <body>
     <header>
-        <a href="../home.php"><div class="logo"><b>MOMENTUM</b></div></a>
+        <a href="../../home.php"><div class="logo"><b>MOMENTUM</b></div></a>
     </header>
 
     <main class="main-form">
@@ -45,7 +45,7 @@
                 <button value="submit" id="invio">ACCEDI</button>
             </form>
             <div class="conteiner-form__messaggio" id="messaggioAccesso">
-                <div class="conteiner-form__messaggio__img"><img src="../Immagini/check.png" alt="check"></div>
+                <div class="conteiner-form__messaggio__img"><img src="../../Immagini/check.png" alt="check"></div>
                 <p>Accesso effetuato con successo</p>
             </div>
         </div>
@@ -55,7 +55,7 @@
         <div>Sito fatto dai Salayad</div>
     </footer>
 
-    <script src=".././File_JS/Form_validation.js"></script>
+    <script src="../.././File_JS/Form_validation.js"></script>
 
     <?php     
         if(isset($_POST['email']) AND isset($_POST['password']) ){
@@ -67,8 +67,8 @@
             }else{
                 $myquery = "SELECT Nome, Cognome, Username, Email, Password, Numero
 							FROM utente 
-							WHERE Email='$email'
-							    AND Password='$password'
+							WHERE Email= '".$email. "'
+							    AND Password='".$password."'
                                 ";
                 $ris = $conn->query($myquery);
 
@@ -83,7 +83,7 @@
                     while ($row = $ris->fetch_assoc()) {
                         $informazioni[] = $row;
                     }
-                }
+
                     session_start();
                     $_SESSION['nome'] = $informazioni[0]['Nome'];
                     $_SESSION['cognome'] = $informazioni[0]['Cognome'];
@@ -105,18 +105,12 @@
 
                     $conn->close();
 
-                    header("Refresh: 2; URL=../home.php");             
+                    header("Refresh: 2; URL=../../home.php");             
                 
 
             }
         }
+    }
 ?>
-        
-
-
-        
-   
-
-
 </body>
 </html>

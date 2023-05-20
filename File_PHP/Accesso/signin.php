@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
     
@@ -28,17 +28,14 @@
         <div class="conteiner-form" id="form-signin">
             <form action="<?php $_SERVER['PHP_SELF'] ?>" name="formSignin" id="formSignin" method="POST" onsubmit="return formValidationS()">
                 <h1>SIGNIN</h1>
-                <div class="gg">
-                    <div class="input-box input-boxnc">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" placeholder="Inserire il nome" onclick="changePlaceholder()">
-                    </div>
-                    <div class="input-box input-boxnc">
-                        <label for="cognome">Cognome</label>
-                        <input type="text" name="cognome" id="cognome" placeholder="Inserire il cognome" onclick="changePlaceholder()">
-                    </div>
+                <div class="input-box input-boxnc">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Inserire il nome" onclick="changePlaceholder()">
                 </div>
-                
+                <div class="input-box input-boxnc">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" name="cognome" id="cognome" placeholder="Inserire il cognome" onclick="changePlaceholder()">
+                </div>
                 <div class="input-box">
                     <label for="username" id="labelUsername">Username</label>
                     <input type="text" name="username" id="username" placeholder="Inserire lo username" onclick="changePlaceholder()">
@@ -67,7 +64,7 @@
                 
             </form>
             <div class="conteiner-form__messaggio" id="messaggioRegistrazione">
-                <div class="conteiner-form__messaggio__img"><img src="../Immagini/check.png" alt="check"></div>
+                <div class="conteiner-form__messaggio__img"><img src="../../Immagini/check.png" alt="check"></div>
                 <p>Registrazione effetuata con successo</p>
             </div>
         </div>
@@ -75,7 +72,7 @@
     
     
 
-    <script src=".././File_JS/Form_validation.js"></script>
+    <script src="../.././File_JS/Form_validation.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -145,7 +142,7 @@
                         $_SESSION['numero'] = $numero;
                         $_SESSION['accesso'] = true;
                         
-                        header("Refresh: 2; URL=../home.php"); 
+                        header("Refresh: 2; URL=../../home.php"); 
                         echo "   <script>
                         var sign = document.getElementById('formSignin');
                         sign.style.display = 'none';
