@@ -9,8 +9,13 @@
     </div>';
 
     if($accesso === true){
-        echo '<a href="../Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a>';
-
+        echo '<div class="contenitore-lognot">
+                    <div  id="campanellina">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                        <div id="numeroNotifica">'.$nRichieste.'</div>
+                    </div>
+                        <a href="../Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a> x
+            </div>';
     }
     else{
         echo'<a href="../Accesso/login.php"><div class="login"><b>LOGIN</b></div></a>';

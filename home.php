@@ -15,160 +15,218 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <header>
-        <a href="home.php"><div class="logo"><b>MOMENTUM</b></div></a>
-        <div class="barraRicerca">
-            <input type="text" name="barra" id="barra" placeholder="Cerca">
-            <ion-icon name="search-outline" id="search-outline"></ion-icon>
-        </div>
-        <?php 
-        if($accesso === true){
-
-            echo '<div class="contenitore-lognot">
-                    <div  id="campanellina">
-                        <ion-icon name="notifications-outline"></ion-icon>
-                        <div id="numeroNotifica">'.$nRichieste.'</div>
-                    </div>
-                        <a href="./File_PHP/Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a> 
-                </div>';
-
-        }
-        else{
-            echo'<a href="./File_PHP/Accesso/login.php"><div class="login"><b>LOGIN</b></div></a>';
-        }
-        ?>
-
-    </header>
-    <main>
-        <div class="main__menu">
-            <a href="home.php" id="linkHome">
-                <div class="main__menu__selezione" id="home">
-                    <div class="icon">
-                        <ion-icon name="home-outline"></ion-icon>
-                    </div>
-                    <div class="tendina">
-                        HOME
-                    </div>
-                </div>
-            </a>
-
-            <a href="File_PHP/Pagine/esplora.php" id="linkEsplora">
-                <div class="main__menu__selezione" id="esplora">
-                    <div class="icon">
-                        <ion-icon name="globe-outline"></ion-icon>
-                    </div>
-                    <div class="tendina">
-                        ESPLORA
-                    </div>
-                </div>
-            </a>
-            <a href="File_PHP/Pagine/amici.php" id="linkAmici">
-                <div class="main__menu__selezione" id="amici">
-                    <div class="icon">
-                        <ion-icon name="accessibility-outline"></ion-icon>
-                    </div>
-                    <div class="tendina">
-                        AMICI                                                           
-                    </div>
-                </div>
-            </a>
-            <a href="File_PHP/Pagine/messaggi.php" id="linkMessaggi">
-                <div class="main__menu__selezione" id="messaggi">
-                    <div class="icon">
-                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-                    </div>
-                    <div class="tendina">
-                        MESSAGGI
-                    </div>
-                </div>
-            </a>
-            <a href="File_PHP/Pagine/crea.php" id="linkCrea">
-                <div class="main__menu__selezione" id="crea">
-                    <div class="icon">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                    </div>
-                    <div class="tendina">
-                        CREA
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="main__containerPagina">
-            <div class="main__pagina">
-                <div class="main__pagina__corpo">
-                    <div class="post">
-                        
-                    </div>
-                    <div class="post">
-                        
-                    </div>
-                    <div class="post">
-                        
-                    </div>
-                </div>
-                <?php if($accesso === true){
-                    echo '<div class="main__pagina__profilo">
-                    <div class="main__pagina__fotoprofilo">
-                        
-                    </div>
-                    <div class="main__pagina__profilo__username" id="nickname">
-                        <b><p>
-                            
-                                    @'. $username. '
-                            
-                        </p></b>
-                    </div>
-                    <div class="main__pagina__profilo__info" id="profilo">
-                        <a href="File_PHP/Pagine/profilo.php">PROFILO</a>
-                    </div>
-                    <div class="main__pagina__profilo__info" id="modifica">
-                        <a href="">MODIFICA</a>
-                    </div>
-                        
-                    </div>';
-                }else{
-                    echo '  <div class="main__pagina__profilo" id="main__pagina__profiloid">
-                                <div class="main__pagina__fotoprofilo">
-                                    
-                                </div>
-                                <div class="main__pagina__profilo__mess">
-                                    <p>Non hai un account?</p>
-                                </div>
-                                <a href="File_PHP/Accesso/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin"><b>SIGNIN</b></button></a>
-                            </div>
-                            <script>
-                                var x = document.getElementById("main__pagina__profiloid");
-                                x.style.height = "300px"
-                            </script>';
-
-                
-                }
-                ?>
-            
+    <div id="container-pagina">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <header>
+            <a href="home.php"><div class="logo"><b>MOMENTUM</b></div></a>
+            <div class="barraRicerca">
+                <input type="text" name="barra" id="barra" placeholder="Cerca">
+                <ion-icon name="search-outline" id="search-outline"></ion-icon>
             </div>
 
-        </div>
-            
-    </main>
 
-    <footer>
-        <div><a>Ahmad Fayad - Federico Sala</a></div>
-    </footer>
-    <script>
-        <?php 
-        if($accesso === false):
+            <?php 
+            if($accesso === true){
+
+                echo '<div class="contenitore-lognot">
+                        <div  id="campanellina">
+                            <ion-icon name="notifications-outline"><div id="numeroNotifica">'.$nRichieste.'</div></ion-icon>
+                            <div id="numeroNotifica">'.$nRichieste.'</div>
+                        </div>
+                            <a href="./File_PHP/Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a> 
+                    </div>
+                    
+                    <div class="notifiche">
+                    <div class="notifiche__titolo">
+                        Notifiche
+                    </div>';
+                     if($nRichieste > 0){
+                        for ($i=0; $i < $nRichieste; $i++) {
+                            echo ' <div class="notifiche__singola">
+                                    <div class="notifiche__singola__testo">'.$nomiRichieste[$i].' vuole essere tuo amico</div>
+                                        <div class="notifiche__singola__form">
+                                            <form action="'. $_SERVER["PHP_SELF"].'" id="formSpunta">
+                                                <input type="hidden" name="valoreSpunta'.$i.'" id="valoreSpunta'.$i.'" value="false">
+                                                <div class="contenitire-buttonSpunta">
+                                                    <button type="submit" onclick="setValoreSpunta()"><ion-icon name="checkmark-outline"></ion-icon></button>
+                                                    <button type="submit" onclick="setValoreSpunta()"><ion-icon name="close-outline"></ion-icon></button>
+                                                </div>
+                    
+                                            </form>
+                                        </div>
+                                    </div>';
+                        }
+                
+                        echo'</div>';
+                     }else{
+                        echo '<div class="notifiche__singola"><div class="notifiche__singola__testo" style="width:100%; justify-content: center;">Non hai nessuna notifica</div></div>';
+                     }
+                        
+
+            }
+            else{
+                echo'<a href="./File_PHP/Accesso/login.php"><div class="login"><b>LOGIN</b></div></a>';
+            }
+            ?>
+
+        </header>
+        <main>
+            <div class="main__menu">
+                <a href="home.php" id="linkHome">
+                    <div class="main__menu__selezione" id="home">
+                        <div class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </div>
+                        <div class="tendina">
+                            HOME
+                        </div>
+                    </div>
+                </a>
+
+                <a href="File_PHP/Pagine/esplora.php" id="linkEsplora">
+                    <div class="main__menu__selezione" id="esplora">
+                        <div class="icon">
+                            <ion-icon name="globe-outline"></ion-icon>
+                        </div>
+                        <div class="tendina">
+                            ESPLORA
+                        </div>
+                    </div>
+                </a>
+                <a href="File_PHP/Pagine/amici.php" id="linkAmici">
+                    <div class="main__menu__selezione" id="amici">
+                        <div class="icon">
+                            <ion-icon name="accessibility-outline"></ion-icon>
+                        </div>
+                        <div class="tendina">
+                            AMICI                                                           
+                        </div>
+                    </div>
+                </a>
+                <a href="File_PHP/Pagine/messaggi.php" id="linkMessaggi">
+                    <div class="main__menu__selezione" id="messaggi">
+                        <div class="icon">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        </div>
+                        <div class="tendina">
+                            MESSAGGI
+                        </div>
+                    </div>
+                </a>
+                <a href="File_PHP/Pagine/crea.php" id="linkCrea">
+                    <div class="main__menu__selezione" id="crea">
+                        <div class="icon">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                        </div>
+                        <div class="tendina">
+                            CREA
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="main__containerPagina">
+                <div class="main__pagina">
+                    <div class="main__pagina__corpo">
+                        <div class="post">
+                            
+                        </div>
+                        <div class="post">
+                            
+                        </div>
+                        <div class="post">
+                            
+                        </div>
+                    </div>
+                    <?php if($accesso === true){
+                        echo '<div class="main__pagina__profilo">
+                        <div class="main__pagina__fotoprofilo">
+                            
+                        </div>
+                        <div class="main__pagina__profilo__username" id="nickname">
+                            <b><p>
+                                
+                                        @'. $username. '
+                                
+                            </p></b>
+                        </div>
+                        <div class="main__pagina__profilo__info" id="profilo">
+                            <a href="File_PHP/Pagine/profilo.php">PROFILO</a>
+                        </div>
+                        <div class="main__pagina__profilo__info" id="modifica">
+                            <a href="">MODIFICA</a>
+                        </div>
+                            
+                        </div>';
+                    }else{
+                        echo '  <div class="main__pagina__profilo" id="main__pagina__profiloid">
+                                    <div class="main__pagina__fotoprofilo">
+                                        
+                                    </div>
+                                    <div class="main__pagina__profilo__mess">
+                                        <p>Non hai un account?</p>
+                                    </div>
+                                    <a href="File_PHP/Accesso/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin"><b>SIGNIN</b></button></a>
+                                </div>
+                                <script>
+                                    var x = document.getElementById("main__pagina__profiloid");
+                                    x.style.height = "300px"
+                                </script>';
+
+                    
+                    }
+                    ?>
+                
+                </div>
+
+            </div>
+                
+        </main>
+
+        <footer>
+            <div><a>Ahmad Fayad - Federico Sala</a></div>
+        </footer>
+        <script>
+            <?php 
+            if($accesso === false):
+            ?>
+                var linkEsplora = document.getElementById('linkEsplora');
+                var linkSeguiti = document.getElementById('linkAmici');
+                var linkMessaggi = document.getElementById('linkMessaggi');
+                var linkCrea = document.getElementById('linkCrea');
+                linkEsplora.href = linkSeguiti.href =  linkMessaggi.href =  linkCrea. href= "File_PHP/Accesso/login.php";
+            <?php 
+            endif
+            ?>
+
+
+            function setValoreSpunta(value) {
+                var valoreSpunta = document.getElementById("valoreSpunta<?php$i?>");
+                valoreSpunta.value = value.toString();
+            }
+
+
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+
+            $("#campanellina").click(function(e){
+
+                 $(".notifiche").toggleClass('is-open');
+                e.preventDefault();
+
+             });
+
+         });
+        </script>
+
+        <?php
+            for
         ?>
-            var linkEsplora = document.getElementById('linkEsplora');
-            var linkSeguiti = document.getElementById('linkAmici');
-            var linkMessaggi = document.getElementById('linkMessaggi');
-            var linkCrea = document.getElementById('linkCrea');
-            linkEsplora.href = linkSeguiti.href =  linkMessaggi.href =  linkCrea. href= "File_PHP/Accesso/login.php";
-        <?php 
-        endif
-        ?>
-    </script>
+        
+    </div>
 </body>
 </html>

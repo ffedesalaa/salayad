@@ -16,15 +16,16 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <script>
-        function changePlaceholder(){
-            var ricerca = document.getElementById("amico");
-            ricerca.placeholder = "Cerca amico";
-            ricerca.classList.remove("colore-placeholder2");
-            ricerca.classList.remove("colore-placeholder");
-        }
-    </script>
     <div id="container-pagina">
+        <script>
+            function changePlaceholder(){
+                var ricerca = document.getElementById("amico");
+                ricerca.placeholder = "Cerca amico";
+                ricerca.classList.remove("colore-placeholder2");
+                ricerca.classList.remove("colore-placeholder");
+            }
+        </script>
+    
         <?php
             require('../Script_PHP/HeaderScript.php');
         ?>
