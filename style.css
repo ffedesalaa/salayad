@@ -172,7 +172,7 @@ header a{
     justify-content: center;
     align-items: center;
 }
-#formSpunta{
+.formSpunta{
     border: none;
     border-radius: 0px;
     width: 90%;
@@ -189,7 +189,7 @@ header a{
     justify-content: space-between;
     align-items: center;
 }
-#formSpunta button{
+.formSpunta button{
     cursor: pointer;
     width:48%;
     border: none;
@@ -201,7 +201,7 @@ header a{
     justify-content: center;
     border-radius: 100%;
 }
-#formSpunta button:hover{
+.formSpunta button:hover{
    background:  rgb(78, 77, 77);
 }
 .contenitire-buttonSpunta ion-icon{

@@ -31,32 +31,44 @@
 
                 echo '<div class="contenitore-lognot">
                         <div  id="campanellina">
-                            <ion-icon name="notifications-outline"><div id="numeroNotifica">'.$nRichieste.'</div></ion-icon>
+                            <ion-icon name="notifications-outline"></ion-icon>
                             <div id="numeroNotifica">'.$nRichieste.'</div>
                         </div>
                             <a href="./File_PHP/Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a> 
                     </div>
                     
                     <div class="notifiche">
-                    <div class="notifiche__titolo">
-                        Notifiche
-                    </div>';
+                        <div class="notifiche__titolo">
+                            Notifiche
+                        </div>';
                      if($nRichieste > 0){
                         for ($i=0; $i < $nRichieste; $i++) {
-                            echo ' <div class="notifiche__singola">
-                                    <div class="notifiche__singola__testo">'.$nomiRichieste[$i].' vuole essere tuo amico</div>
+                            $nomeForm = 'formSpunta_'. $i;
+                            $idSpunta = 'idSpunta_' . $i;
+                            $nomeSpunta = 'nomeSpunta_' . $i; ?>
+                        
+                        
+                             <div class="notifiche__singola">
+                                    <div class="notifiche__singola__testo"><?php echo $nomiRichieste[$i]; ?> vuole essere tuo amico</div>
                                         <div class="notifiche__singola__form">
-                                            <form action="'. $_SERVER["PHP_SELF"].'" id="formSpunta">
-                                                <input type="hidden" name="valoreSpunta'.$i.'" id="valoreSpunta'.$i.'" value="false">
+                                            <form action="<?php $_SERVER["PHP_SELF"]?>" id="<?php echo $nomeForm;?>" class="formSpunta" method='post'>
                                                 <div class="contenitire-buttonSpunta">
-                                                    <button type="submit" onclick="setValoreSpunta()"><ion-icon name="checkmark-outline"></ion-icon></button>
-                                                    <button type="submit" onclick="setValoreSpunta()"><ion-icon name="close-outline"></ion-icon></button>
+                                                <button type="submit" id="<?php echo $idSpunta; ?>" name="<?php echo $nomeSpunta; ?>" value='true'><ion-icon name="checkmark-outline"></ion-icon></button>
+                                                <button type="submit" id="<?php echo $idSpunta; ?>" name="<?php echo $nomeSpunta; ?>" value='false'><ion-icon name="close-outline"></ion-icon></button>
                                                 </div>
                     
                                             </form>
                                         </div>
-                                    </div>';
+                                    </div>
+                            
+                    <?php              
+                        
+                        if(isset($_POST["$nomeSpunta"])){
+                            $valore[$i] = $_POST["$nomeSpunta"];
+                        }else{
+                            $valore[$i] = '';
                         }
+                    }
                 
                         echo'</div>';
                      }else{
@@ -187,6 +199,57 @@
         <footer>
             <div><a>Ahmad Fayad - Federico Sala</a></div>
         </footer>
+        <?php
+        
+        if($nRichieste > 0) {
+            for ($i=0; $i < $nRichieste ; $i++){ 
+                    $conn = new mysqli("localhost","root", "", "momentum");
+    
+                    if ($conn->connect_error) {
+                        die("<p>Connesione al database fallita : ".$conn->connect_error."</p>");
+                    }else{
+                        $myquery = "SELECT email
+                            FROM utente
+                            WHERE username = '".$nomiRichieste[$i]."'";
+                        $ris = $conn->query($myquery);
+                        if($ris->num_rows == 0){
+                            die('emily');
+                        }elseif($ris->num_rows > 0){
+                            $emails = array();
+                            while ($row = $ris->fetch_assoc()) {
+                                $emails[] = $row;
+                            }
+                            $g = $emails[0]['email'];
+                            if($valore[$i] === 'true'){
+                                $myquery = "UPDATE amicizia SET accettato = '1' WHERE EmailAmicoR = '$g' or EmailAmicoM = '$g'";
+                                $ris = $conn->query($myquery);
+                            }elseif($valore[$i] === 'false'){
+                                /*$myquery = "DELETE FROM amicizia WHERE EmailAmicoR = '$g' or EmailAmicoM = '$g'";
+                                $ris = $conn->query($myquery);*/
+                                echo 'bella';
+                            
+                             }elseif($valore[$i] === ''){
+
+                             }
+                             for ($i=0; $i < $nRichieste; $i++) { 
+                                if($valore[$i] === 'true' ||$valore[$i] === 'false')
+                                $valore[$i] = '';
+                             }
+  
+                                
+                             
+                                
+                             
+                        }
+              }
+              
+
+
+            }
+            print_r($valore);
+        }
+          
+      ?>
         <script>
             <?php 
             if($accesso === false):
@@ -199,14 +262,6 @@
             <?php 
             endif
             ?>
-
-
-            function setValoreSpunta(value) {
-                var valoreSpunta = document.getElementById("valoreSpunta<?php$i?>");
-                valoreSpunta.value = value.toString();
-            }
-
-
         </script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -223,10 +278,7 @@
          });
         </script>
 
-        <?php
-            for
-        ?>
-        
+
     </div>
 </body>
 </html>
