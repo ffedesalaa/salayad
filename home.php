@@ -25,7 +25,7 @@
                 <ion-icon name="search-outline" id="search-outline"></ion-icon>
             </div>
 
-
+    
             <?php 
             if($accesso === true){
 
@@ -37,42 +37,33 @@
                             <a href="./File_PHP/Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a> 
                     </div>
                     
-                    <div class="notifiche">
-                        <div class="notifiche__titolo">
-                            Notifiche
-                        </div>';
+                    <div class="container_notifiche">
+                        <div class="notifiche">
+                            <div class="notifiche__titolo">
+                                Notifiche
+                            </div>';
                      if($nRichieste > 0){
                         for ($i=0; $i < $nRichieste; $i++) {
-                            $nomeForm = 'formSpunta_'. $i;
-                            $idSpunta = 'idSpunta_' . $i;
-                            $nomeSpunta = 'nomeSpunta_' . $i; ?>
+                            $idSpuntaT = 'idSpuntaT_' . $i;
+                            $idSpuntaF = 'idSpuntaF_' . $i;
+                            $idNotifica ='idNotifica_'.$i;?>
                         
-                        
-                             <div class="notifiche__singola">
-                                    <div class="notifiche__singola__testo"><?php echo $nomiRichieste[$i]; ?> vuole essere tuo amico</div>
-                                        <div class="notifiche__singola__form">
-                                            <form action="<?php $_SERVER["PHP_SELF"]?>" id="<?php echo $nomeForm;?>" class="formSpunta" method='post'>
-                                                <div class="contenitire-buttonSpunta">
-                                                <button type="submit" id="<?php echo $idSpunta; ?>" name="<?php echo $nomeSpunta; ?>" value='true'><ion-icon name="checkmark-outline"></ion-icon></button>
-                                                <button type="submit" id="<?php echo $idSpunta; ?>" name="<?php echo $nomeSpunta; ?>" value='false'><ion-icon name="close-outline"></ion-icon></button>
-                                                </div>
-                    
-                                            </form>
+                             <div class="notifiche__singola" id="<?php echo $idNotifica; ?>">
+                                    <div class="notifiche__singola__testo"><b><?php echo $nomiRichieste[$i]; ?></b> vuole essere tuo amico</div>
+                                        <div class="notifiche__singola__bottoni">
+                                                <button class="classSpunta" id="<?php echo $idSpuntaT; ?>"  data-valore="true"><ion-icon name="checkmark-outline"></ion-icon></button>
+                                                <button class="classSpunta" id="<?php echo $idSpuntaF; ?>"  data-valore="false"><ion-icon name="close-outline"></ion-icon></button> 
                                         </div>
                                     </div>
                             
                     <?php              
                         
-                        if(isset($_POST["$nomeSpunta"])){
-                            $valore[$i] = $_POST["$nomeSpunta"];
-                        }else{
-                            $valore[$i] = '';
-                        }
+
                     }
                 
-                        echo'</div>';
+                        echo'<div class="notifiche__singola" id="mesNot" style ="display:none; justify-content: center; align-items: center; padding-left:10px;color: #fff; ">Non hai nessuna notifica</div></div>';
                      }else{
-                        echo '<div class="notifiche__singola"><div class="notifiche__singola__testo" style="width:100%; justify-content: center;">Non hai nessuna notifica</div></div>';
+                        echo '<div class="notifiche__singola"><div class="notifiche__singola__testo" style="width:100%; justify-content: center;">Non hai nessuna notifica</div></div></div>';
                      }
                         
 
@@ -199,57 +190,7 @@
         <footer>
             <div><a>Ahmad Fayad - Federico Sala</a></div>
         </footer>
-        <?php
-        
-        if($nRichieste > 0) {
-            for ($i=0; $i < $nRichieste ; $i++){ 
-                    $conn = new mysqli("localhost","root", "", "momentum");
-    
-                    if ($conn->connect_error) {
-                        die("<p>Connesione al database fallita : ".$conn->connect_error."</p>");
-                    }else{
-                        $myquery = "SELECT email
-                            FROM utente
-                            WHERE username = '".$nomiRichieste[$i]."'";
-                        $ris = $conn->query($myquery);
-                        if($ris->num_rows == 0){
-                            die('emily');
-                        }elseif($ris->num_rows > 0){
-                            $emails = array();
-                            while ($row = $ris->fetch_assoc()) {
-                                $emails[] = $row;
-                            }
-                            $g = $emails[0]['email'];
-                            if($valore[$i] === 'true'){
-                                $myquery = "UPDATE amicizia SET accettato = '1' WHERE EmailAmicoR = '$g' or EmailAmicoM = '$g'";
-                                $ris = $conn->query($myquery);
-                            }elseif($valore[$i] === 'false'){
-                                /*$myquery = "DELETE FROM amicizia WHERE EmailAmicoR = '$g' or EmailAmicoM = '$g'";
-                                $ris = $conn->query($myquery);*/
-                                echo 'bella';
-                            
-                             }elseif($valore[$i] === ''){
-
-                             }
-                             for ($i=0; $i < $nRichieste; $i++) { 
-                                if($valore[$i] === 'true' ||$valore[$i] === 'false')
-                                $valore[$i] = '';
-                             }
-  
-                                
-                             
-                                
-                             
-                        }
-              }
-              
-
-
-            }
-            print_r($valore);
-        }
-          
-      ?>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             <?php 
             if($accesso === false):
@@ -262,9 +203,112 @@
             <?php 
             endif
             ?>
+
+            
+                
+
+
+                $(document).ready(function() {
+                    $('.classSpunta').click(function() {
+                    var idDinamico = $(this).attr('id');
+                    var valore = $(this).data('valore');
+                    inviaDati(idDinamico, valore);
+
+                    var buttons = document.querySelectorAll(".notifiche button");
+                    var regex = /idSpuntaT_/;
+
+                    if(regex.test(idDinamico) === true){
+                        var idNumero = idDinamico.replace("idSpuntaT_", "");
+
+                        for (var i = 0; i < buttons.length; i++) {
+                            var currentButtonId = buttons[i].id;
+                            if(regex.test(currentButtonId) === true){
+                                var buttonNumber = parseInt(currentButtonId.replace("idSpuntaT_", ""));
+                                if (buttonNumber > parseInt(idDinamico.replace("idSpuntaT_", ""))) {
+                                    var newButtonNumber = buttonNumber - 1;
+                                    var newButtonId = "idSpuntaT_" + newButtonNumber;
+                                    buttons[i].id = newButtonId;
+                                }
+                            }else{
+                                var buttonNumber = parseInt(currentButtonId.replace("idSpuntaF_", ""));
+                                if (buttonNumber > parseInt(idDinamico.replace("idSpuntaT_", ""))) {
+                                    var newButtonNumber = buttonNumber - 1;
+                                    var newButtonId = "idSpuntaF_" + newButtonNumber;
+                                    buttons[i].id = newButtonId;
+                                }
+                            }
+                        }
+                    }else{
+                        var idNumero = idDinamico.replace("idSpuntaF_", "");
+
+                        for (var i = 0; i < buttons.length; i++) {
+                            var currentButtonId = buttons[i].id;
+                            if(regex.test(currentButtonId) === true){
+                                var buttonNumber = parseInt(currentButtonId.replace("idSpuntaT_", ""));
+                                if (buttonNumber > parseInt(idDinamico.replace("idSpuntaF_", ""))) {
+                                    var newButtonNumber = buttonNumber - 1;
+                                    var newButtonId = "idSpuntaF_" + newButtonNumber;
+                                    buttons[i].id = newButtonId;
+                                }
+                            }else{
+                                var buttonNumber = parseInt(currentButtonId.replace("idSpuntaF_", ""));
+                                if (buttonNumber > parseInt(idDinamico.replace("idSpuntaF_", ""))) {
+                                    var newButtonNumber = buttonNumber - 1;
+                                    var newButtonId = "idSpuntaF_" + newButtonNumber;
+                                    buttons[i].id = newButtonId;
+                                }
+                            }
+                        }
+                    }
+
+
+                    var idNotifica = 'idNotifica_' + idNumero;
+                    var notifica = document.getElementById(idNotifica);
+                    notifica.remove();
+                    
+                    
+
+
+                        var notifiche = document.querySelectorAll(".notifiche__singola");
+                        for (var i = 0; i < notifiche.length; i++) {
+                            var currentNotificaId = notifiche[i].id;
+                            var notificaNumber = parseInt(currentNotificaId.replace("idNotifica_", ""));
+                            if (notificaNumber > parseInt(idNotifica.replace("idNotifica_", ""))) {
+                            var newNotificaNumber = notificaNumber - 1;
+                            var newNotificaId = "idNotifica_" + newNotificaNumber;
+                            notifiche[i].id = newNotificaId;
+                            
+                            }
+                        }
+                        if (notifiche.length === 1){
+                            var mesNot = document.getElementById('mesNot');
+                            mesNot.style.display = 'flex';
+                        }
+                    });
+
+                    function inviaDati(idDinamico, valore) {
+                    var dati = {
+                        id: idDinamico,
+                        valore: valore
+                    };
+
+                    $.ajax({
+                        url: 'AccettazioneRichiesta.php',
+                        method: 'POST',
+                        data: dati,
+                        success: function(response) {
+                        console.log(response);
+                        },
+                        error: function(xhr, status, error) {
+                        console.log(error);
+                        }
+                    });
+                    }
+                });
+
         </script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
         <script>
         $(document).ready(function(){
 
