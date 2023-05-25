@@ -49,7 +49,7 @@
                             $idNotifica ='idNotifica_'.$i;?>
                         
                              <div class="notifiche__singola" id="<?php echo $idNotifica; ?>">
-                                    <div class="notifiche__singola__testo"><b><?php echo $nomiRichieste[$i]; ?></b> vuole essere tuo amico</div>
+                                    <div class="notifiche__singola__testo"><?php echo $nomiRichieste[$i]; ?> vuole essere tuo amico</div>
                                         <div class="notifiche__singola__bottoni">
                                                 <button class="classSpunta" id="<?php echo $idSpuntaT; ?>"  data-valore="true"><ion-icon name="checkmark-outline"></ion-icon></button>
                                                 <button class="classSpunta" id="<?php echo $idSpuntaF; ?>"  data-valore="false"><ion-icon name="close-outline"></ion-icon></button> 
