@@ -36,6 +36,7 @@
                         <label for="cognome">Cognome</label>
                         <input type="text" name="cognome" id="cognome" placeholder="Inserire il cognome" onclick="changePlaceholder()">
                     </div>
+                        
                     <div class="input-box">
                         <label for="username" id="labelUsername">Username</label>
                         <input type="text" name="username" id="username" placeholder="Inserire lo username" onclick="changePlaceholder()">
@@ -76,7 +77,7 @@
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-        <?php 
+        <?php
             if(isset($_POST['nome']) AND isset($_POST['cognome']) AND isset($_POST['username']) AND isset($_POST['email']) AND isset($_POST['password']) ){
 
                 $conn = new mysqli("localhost","root", "", "momentum");

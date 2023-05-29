@@ -246,7 +246,7 @@
                     }else{
                         echo '  <div class="main__pagina__profilo" id="main__pagina__profiloid">
                                     <div class="main__pagina__fotoprofilo">
-                                        
+                                        <img src="Immagini/Foto_Profilo/profilo.png" alt="">
                                     </div>
                                     <div class="main__pagina__profilo__mess">
                                         <p>Non hai un account?</p>
@@ -261,7 +261,7 @@
                     
                     }
                     ?>
-                
+                    
                 </div>
 
             </div>
