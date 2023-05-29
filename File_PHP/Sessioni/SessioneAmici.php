@@ -47,9 +47,9 @@
         }
 
 
-        $myquery = "SELECT EmailAmicoM, EmailAmicoR, Accettato
+        $myquery = "SELECT EmailAmicoM
                     FROM amicizia 
-                    WHERE (EmailAmicoM = '".$email."' OR EmailAmicoR = '".$email."') AND Accettato = '0' ";
+                    WHERE EmailAmicoR = '".$email."' AND Accettato = '0' ";
         $ris = $conn->query($myquery);            
         if($ris->num_rows >0) {
             $emailTot = array();
@@ -60,8 +60,6 @@
             $nRichieste = $ris->num_rows;
 
             for ($i=0; $i < $nRichieste; $i++) { 
-                $emailTot[$i] = array_diff($emailTot[$i], array($email));
-                $emailTot[$i] = array_diff($emailTot[$i], array('0'));
                 $emailTot[$i] = array_values($emailTot[$i]);
             }
 
