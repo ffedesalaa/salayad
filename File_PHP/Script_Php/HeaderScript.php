@@ -14,7 +14,7 @@
                         <ion-icon name="notifications-outline"></ion-icon>
                         <div id="numeroNotifica">'.$nRichieste.'</div>
                     </div>
-                        <a href="../Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a> x
+                        <a href="../Accesso/logout.php"><div class="login"><b>LOGOUT</b></div></a> 
             </div>';
     }
     else{

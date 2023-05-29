@@ -321,7 +321,7 @@ main{
 
 .main__pagina__corpo{
     height: auto;
-    width: 850px;
+    width: 800px;
     justify-content: flex-start;
     display: flex;
     flex-wrap: wrap;
@@ -334,6 +334,110 @@ main{
     margin: 20px auto;
     border: solid rgb(78, 77, 77) 4px; 
     height: 400px;
+    display: flex;
+}
+
+.post__foto{
+    width: 50%;
+    border: solid rgb(78, 77, 77) 3px;
+    margin: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.post__commenti{
+    width: 50%;
+}
+
+.post__like{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.post__like__div{
+    font-size: 30px;
+    font-family: "fontregular";
+    margin-right: 20px;
+    display: flex;
+    align-items: flex-end;
+    height: 50px;
+    color: #fff;
+}
+
+.post__comment{
+    border-left: solid rgb(78, 77, 77) 2px;
+    border-top: solid rgb(78, 77, 77) 2px;
+    border-radius: 20px;
+    height: 268px;
+    margin:10px 20px 0px 20px;
+    padding: 10px 5px 0px 10px;
+    overflow: auto;
+    overflow-y: scroll; 
+    scrollbar-width: thin; 
+    scrollbar-color: #000000 #ffffff;
+}
+
+.post__comment::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  .post__comment::-webkit-scrollbar-track {
+    background-color: #ffffff; 
+  }
+  
+  .post__comment::-webkit-scrollbar-thumb {
+    background-color: #000000; 
+  }
+  
+  .post__comment::-webkit-scrollbar-thumb:hover {
+    background-color: #555555; 
+  }
+
+
+.commento{
+    font-family: "fontregular";
+    color: #fff;
+    border-bottom: solid 2px;
+    padding-bottom: 5px;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(78, 77, 77) 50%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+}
+
+.post__scrivi{
+    height: 30px;
+    border: solid rgb(247, 67, 97) 2px;
+    margin:10px 20px 0px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__scrivi input{
+    background: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    color:#fff;
+    font-family: "fontregular";
+}
+
+.post__scrivi button{
+    background: none;
+    outline: none;
+    border: none;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+.post__scrivi ion-icon{
+    font-size: 20px;
+    color: #fff;
 }
 
 .main__pagina__profilo{
@@ -731,7 +835,10 @@ input:-webkit-autofill {
     margin-left: 250px;
 }
 
+
+
 /*AMICI*/
+
 .main__pagina__corpo__elementi{
     margin-top: 20px;
     min-height: 500px;
@@ -742,34 +849,40 @@ input:-webkit-autofill {
     background: rgb(43, 43, 43); 
     border-radius: 30px;
     border: solid rgb(247, 67, 97) 4px; 
-    font-family: "fontregular";
+    
     
 }
 nav{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 30px;
-    border-bottom: solid rgb(247, 67, 97) 3px; 
-    gap: 20px;
+    height: 70px;
+    gap: 80px;
+    align-items: center;
+    border-bottom: solid rgb(78, 77, 77);
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .navElement{
-    border:none;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100%;
-    width: 80px;
-    border-right: solid rgb(247, 67, 97) 3px; 
-    border-left: solid rgb(247, 67, 97) 3px; 
+    height: 60%;
+    width: 120px;
+    border: solid rgb(247, 67, 97)  2px;
+    border-radius: 20px;
     background: rgb(78, 77, 77);
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: "fontregular";
+    transition: transform 0.2s ease-in-out;
 }
 .navElement:hover{
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    border: solid rgb(78, 77, 77)  2px;
+    transform: scale(1.1);
 }
 
 .conteiner-form-amici{
@@ -792,8 +905,9 @@ nav{
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    border: solid rgb(78, 77, 77) 4px;
-    border-radius: 10px ;
+    border: solid rgb(78, 77, 77) 3px;
+    border-radius: 15px ;
+    font-family: "fontregular";
 }
 
 .barraRicercaAmico input{
@@ -812,15 +926,14 @@ nav{
     width:100px;
     background:#000 ;
     border: none;
-    font-size: 15px;
+    font-size: 18px;
     background: rgb(78, 77, 77);
-    border: solid rgb(247, 67, 97) 2px;
+    border: solid rgb(78, 77, 77) 2px;
     border-radius: 10px;
     color:#fff;
     margin: auto;
     margin-right: 5px;
-    
-    
+    font-family: "fontregular";
 }
 
 #aggiungi:hover {
@@ -835,20 +948,41 @@ nav{
 .tuoiAmici__barra{
     color: #fff;
     font-size: 25px;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 10px 20px;
+    font-family: "fontregular";
 }
-.tuoiAmici__amici{
+
+.lista__amici{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    border-bottom: solid rgb(78, 77, 77) 2px;
     margin: 0 auto;
+    padding: 5px 0px 5px 0px;
+}
+
+.fp__amici{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-image: url("profilo.png");
+    background-size: 120% 115%;
+    background-repeat: no-repeat;
+    background-position: -5px;
+    border: solid rgb(78, 77, 77) 2px;
+    margin-left: 20px;
+}
+
+.tuoiAmici__amici{
     margin-top: 5px;
-    width: 95%;
-    height: 30px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 18px;
-    border-bottom:solid #fff 3px;
-    
+    font-size: 25px;
+    font-family: "fontregular";
 }
 
 .is-open{

@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messaggi</title>
+    <title>Amici</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -39,26 +39,31 @@
                     <div class="main__pagina__corpo">
                         <div class="main__pagina__corpo__elementi">
                             <nav>
-                                <button class="navElement" id="navElementAmici" onclick="switchAmici()"><b>Amici</b></button>
-                                <button class="navElement" id="navElementCerca" onclick="switchCerca()"><b>Cerca</b></button>
+                                <button class="navElement" id="navElementAmici" onclick="switchAmici()"><b>AMICI</b></button>
+                                <button class="navElement" id="navElementCerca" onclick="switchCerca()"><b>CERCA</b></button>
                             </nav>
                             <div class="conteiner-form-amici" id="conteiner-form-amici">
                                 <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" id="formRicercaAmici" onsubmit="return valoreInserito()">
                                     <div class="barraRicercaAmico">
                                         <input type="text" name="amico" id="amico" placeholder="Cerca amico" autocomplete="off" onclick = "changePlaceholder()">
-                                        <button value="submit" id="aggiungi"><b>Aggiungi</b></button>
+                                      <button value="submit" id="aggiungi"><b>Aggiungi</b></button>
                                     </div>
                                 </form>
                             </div>
                             <div class="tuoiAmici" id="tuoiAmici">
-                                <div class="tuoiAmici__barra">
-                                    I tuoi amici:
-                                </div>
-                                <?php 
-                                for ($i=0; $i < $nAmici; $i++) {
-                                    echo '<div class="tuoiAmici__amici">@'.$nomiAmici[$i].'</div>';
-                                }
-                                ?>
+                               
+                                
+                                    <?php 
+                                    for ($i=0; $i < $nAmici; $i++) {
+
+                                        echo '
+                                            <div class="lista__amici">
+                                            <div class="fp__amici">
+                                            </div>
+                                            <div class="tuoiAmici__amici">@'.$nomiAmici[$i].'</div></div>';
+                                    }
+                                    ?>
+                                
                             </div>
                         </div>
                     </div>
