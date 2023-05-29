@@ -348,15 +348,15 @@ main{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-image: url("profilo.png");
-    background-size: 120% 115%;
-    background-repeat: no-repeat;
-    background-position: -18px;
     border: solid rgb(78, 77, 77) 4px;
     margin: 0 auto;
     margin-top: 20px;
+    overflow: hidden;
 }
 
+.main__pagina__fotoprofilo img{
+    width: 100%;
+}
 #linkArea{
     display: block;
     margin: 0 auto;
@@ -474,8 +474,7 @@ footer{
 }
 
 .formLog{
-    display: flex;
-    flex-direction: column;
+    display: flex; 
     background: rgb(43, 43, 43);  
     color:white;
     width: 100%;
@@ -483,9 +482,11 @@ footer{
     border:4px solid rgb(247, 67, 97);
     border-radius: 20px;
     font-family: "fontregular";
+    flex-wrap: wrap;
 }
 
 .formLog h1{
+    width: 100%;
     text-align: center;
     font-size: 45px;
     font-family: "fontregular";  
@@ -499,12 +500,61 @@ footer{
     margin-top: 15px;
     position: relative ;
 }
+.contenitoreNCFoto{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contenitoreNCFoto__NC{
+    width: 50%;
+}
+/*
+.input-boxnc{
+    margin-left: 5px;
+}
+*/
+.contenitoreNCFoto__Foto{
+    width: 50%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+}
+.contenitoreNCFoto__Foto input{
+    display: none;
+}
+.contenitoreNCFoto__Foto__icona{
+    border: solid rgb(78, 77, 77) 2px;;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.contenitoreNCFoto__Foto__icona img{
+    width: 100%;
+    height: 100%;
+}
+.contenitoreNCFoto__Foto__icona label{
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    align-items: center;
+    justify-content: center;
+}
 .input-box label{
     text-align: left;
     width: 100%;
     padding-left: 15px;
     font-size: 18px;
 }
+/*.input-boxnc label{
+    padding-left: 10px;
+}*/
 
 .input-box input{
     width: 95%;
