@@ -376,7 +376,7 @@ main{
 }
 
 .post__comment::-webkit-scrollbar {
-    width: 8px; 
+    width: 4px; 
   }
   
   .post__comment::-webkit-scrollbar-track {
