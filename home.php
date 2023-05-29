@@ -133,13 +133,92 @@
                 <div class="main__pagina">
                     <div class="main__pagina__corpo">
                         <div class="post">
-                            
-                        </div>
-                        <div class="post">
-                            
-                        </div>
-                        <div class="post">
-                            
+                            <div class="post__foto">
+                                <img src="uffa.jpg">
+                            </div>
+                            <div class="post__commenti">
+                                <div class="post__like">
+                                    <a href="">
+                                        <div class="post__like__div" >
+                                            <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post__comment">
+                                    <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        <div class="commento">
+                                        <?php
+                                            echo "@".$username. ":";
+                                        ?>
+                                        aaaaaaaaaaaaaaaa</div>
+                                        
+                                </div>
+                                <div class="post__scrivi">
+                                    <input type="text">
+                                    <button>
+                                        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>  
                         </div>
                     </div>
                     <?php if($accesso === true){

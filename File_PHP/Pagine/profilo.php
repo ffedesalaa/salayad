@@ -40,7 +40,7 @@
                             <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
                         </div>
                     </a>
-                    <a href="" id="friends">
+                    <a href="amici.php" id="friends">
                         <div class="main__infoprofile__info" >
                             <p>552.532.333 </p> <ion-icon name="accessibility-outline" class="proficon" ></ion-icon>
                         </div>
