@@ -21,7 +21,7 @@
     <div id="container-pagina">
     
         <header>
-            <a href="../home.php"><div class="logo"><b>MOMENTUM</b></div></a>
+            <a href="../../home.php"><div class="logo"><b>MOMENTUM</b></div></a>
         </header>
 
         <main class="main-form">

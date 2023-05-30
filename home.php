@@ -185,31 +185,8 @@
                                             echo "@".$username. ":";
                                         ?>
                                         aaaaaaaaaaaaaaaa</div>
-                                        <div class="commento">
-                                        <?php
-                                            echo "@".$username. ":";
-                                        ?>
-                                        aaaaaaaaaaaaaaaa</div>
-                                        <div class="commento">
-                                        <?php
-                                            echo "@".$username. ":";
-                                        ?>
-                                        aaaaaaaaaaaaaaaa</div>
-                                        <div class="commento">
-                                        <?php
-                                            echo "@".$username. ":";
-                                        ?>
-                                        aaaaaaaaaaaaaaaa</div>
-                                        <div class="commento">
-                                        <?php
-                                            echo "@".$username. ":";
-                                        ?>
-                                        aaaaaaaaaaaaaaaa</div>
-                                        <div class="commento">
-                                        <?php
-                                            echo "@".$username. ":";
-                                        ?>
-                                        aaaaaaaaaaaaaaaa</div>
+                                        
+            
                                         
                                 </div>
                                 <div class="post__scrivi">
