@@ -579,6 +579,7 @@ footer{
 
 .formLog{
     display: flex; 
+    flex-direction: column;
     background: rgb(43, 43, 43);  
     color:white;
     width: 100%;
