@@ -64,7 +64,7 @@
                 $conn = new mysqli("localhost","root", "", "momentum");
 
                 if ($conn->connect_error) {
-                    die("<p>Connesione al database fallita : ".$conn->connect_error."</p>");
+                    die("<p>Connessione al database fallita : ".$conn->connect_error."</p>");
                 }else{
                     $myquery = "SELECT Nome, Cognome, Username, Email, Password, Numero, PercFotoProf
                                 FROM utente 

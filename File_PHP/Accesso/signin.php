@@ -23,6 +23,7 @@
         <header>
             <a href="../../home.php"><div class="logo"><b>MOMENTUM</b></div></a>
         </header>
+        <form action=""></form>
 
         <main class="main-form">
             <div class="conteiner-form" id="form-signin">
