@@ -1100,3 +1100,117 @@ nav{
     font-size: 30px;
     color: #fff;
 }
+
+
+/* CREA */
+
+.selezione__foto__post{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.foto__preview{
+    width: 350px;
+    height: 300px;
+    border: solid red 2px;
+    border-radius: 20px;
+    margin: 14px 0px 14px 0px;
+}
+
+.selezione__foto{
+    width: 50px;
+    height: 50px;
+    background: rgb(78, 77, 77);
+    border: solid rgb(247, 67, 97) 2px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.selezione__foto ion-icon{
+    font-size: 45px;
+    color: #fff;
+}
+
+.selezione__foto:hover{
+    background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    border: solid rgb(78, 77, 77) 2px;
+    transform: scale(1.1);
+}
+
+.commento__foto__post{
+    width: 50%;
+    height: 100%;
+    border-left: solid 2px;
+    border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(78, 77, 77) 50%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.commento__preview{
+    width: 350px;
+    height: 300px;
+    margin: 14px 0px 14px 0px;
+}
+
+.titolo__commento{
+    display: flex;
+    justify-content: center; 
+    font-size: 25px;
+    padding-bottom: 5px;
+    color: #fff;
+    font-family: "fontregular";
+    border-bottom: solid 2px;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(78, 77, 77) 50%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+    height: 40px;
+}
+
+.scrivi__commento{
+    height: 240px;
+    margin-top: 20px;
+    border: solid rgb(247, 67, 97) 2px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrivi__commento textarea{
+    height: 220px;
+    width: 335px; 
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    resize: none;
+}
+
+.pubblica{
+    border-radius: 20px;
+    margin-top: 7px;
+    padding: 5px 20px;
+    font-size: 20px;
+    background: rgb(78, 77, 77);
+    border: solid rgb(247, 67, 97) 2px;
+    transition: transform 0.2s ease-in-out;
+    font-family: "fontregular";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    color: #fff;
+}
+
+.pubblica:hover{
+    background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    border: solid rgb(78, 77, 77) 2px;
+    transform: scale(1.1);
+}
