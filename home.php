@@ -201,7 +201,7 @@
                     <?php if($accesso === true){
                         echo '<div class="main__pagina__profilo">
                         <div class="main__pagina__fotoprofilo">
-                            
+                        <img src="Immagini/Foto_Profilo/'.$nomeFile.'" alt="">
                         </div>
                         <div class="main__pagina__profilo__username" id="nickname">
                             <b><p>

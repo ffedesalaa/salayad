@@ -66,7 +66,7 @@
                 if ($conn->connect_error) {
                     die("<p>Connesione al database fallita : ".$conn->connect_error."</p>");
                 }else{
-                    $myquery = "SELECT Nome, Cognome, Username, Email, Password, Numero
+                    $myquery = "SELECT Nome, Cognome, Username, Email, Password, Numero, PercFotoProf
                                 FROM utente 
                                 WHERE Email= '".$email. "'
                                     AND Password='".$password."'
@@ -92,6 +92,7 @@
                         $_SESSION['email'] = $email;
                         $_SESSION['password'] = $password;
                         $_SESSION['numero'] = $informazioni[0]['Numero'];
+                        $_SESSION['fotoProfilo'] = $informazioni[0]['PercFotoProf'];
                         $_SESSION['accesso'] = true; 
 
                         echo "   <script>

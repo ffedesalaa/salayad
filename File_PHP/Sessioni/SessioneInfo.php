@@ -5,6 +5,7 @@
     if(isset($_SESSION['email'])) $email = $_SESSION['email'];  else $email = "";     
     if(isset($_SESSION['password'])) $password = $_SESSION['password'];  else $password = "";     
     if(isset($_SESSION['numero'])) $numero = $_SESSION['numero'];  else $numero = "";  
+    if(isset($_SESSION['fotoProfilo'])) $nomeFile = $_SESSION['fotoProfilo']; else $nomeFile = '';
     if(isset($_SESSION['accesso'])) $accesso = $_SESSION['accesso']; else $accesso= false;
 
     

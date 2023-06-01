@@ -143,7 +143,7 @@
                             $_SESSION['numero'] = $numero;
                             $_SESSION['accesso'] = true;
                             
-                            header("Refresh: 2; URL=../../home.php"); 
+                            header("Refresh: 2; URL=PersonalizzazioneProfilo.php"); 
                             echo "   <script>
                             var sign = document.getElementById('formSignin');
                             sign.style.display = 'none';
