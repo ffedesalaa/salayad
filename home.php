@@ -107,7 +107,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="File_PHP/Pagine/messaggi.php" id="linkMessaggi">
+                <a href="File_PHP/Pagine/chat.php" id="linkMessaggi">
                     <div class="main__menu__selezione" id="messaggi">
                         <div class="icon">
                             <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
@@ -164,7 +164,7 @@
                                         <?php
                                             echo "@".$username. ":";
                                         ?>
-                                        aaaaaaaaaaaaaaaa</div>
+                                        che tette</div>
                                         <div class="commento">
                                         <?php
                                             echo "@".$username. ":";

@@ -1034,3 +1034,69 @@ nav{
 .is-open{
     display: block;
 }
+
+
+/* MESSAGGI */
+
+.main__chat__corpo__elementi{
+    margin-top: 20px;
+    min-height: 600px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: rgb(43, 43, 43); 
+    border-radius: 30px;
+    border: solid rgb(247, 67, 97) 4px; 
+}
+
+.chat__profili{
+    width: 35%;
+    border: solid 2px;
+    border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(78, 77, 77) 50%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+    height: 100%;
+}
+
+.chat__messaggi{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.chat__scrivi{
+    height: 40px;
+    border: solid rgb(247, 67, 97) 3px;
+    margin:10px 20px 20px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.chat__scrivi input{
+    background: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    color:#fff;
+    font-family: "fontregular";
+}
+
+.chat__scrivi button{
+    background: none;
+    outline: none;
+    border: none;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+.chat__scrivi ion-icon{
+    font-size: 30px;
+    color: #fff;
+}

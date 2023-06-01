@@ -33,7 +33,7 @@
                 </div>
             </div>
         </a>
-        <a href="messaggi.php" id="linkMessaggi">
+        <a href="chat.php" id="linkMessaggi">
             <div class="main__menu__selezione" id="messaggi">
                 <div class="icon">
                     <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
