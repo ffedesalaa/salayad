@@ -122,82 +122,90 @@
                     ?>
                 </a>
             </div>
-
-            <div class="main__containerPagina">
-                <div class="main__pagina">
-                    <div class="main__pagina__corpo">
-                        <div class="post">
-                            <div class="post__foto">
-                                <img src="uffa.jpg">
+            <?php
+                if($accesso===false)
+                {
+                    echo '<div class="main__containerPagina">
+                    <div class="main__pagina">
+                        <div class="main__pagina__corpo">
+                            <div class="post__prelogin">
+                                <p>Accedi per vedere i post degli amici</p>
                             </div>
-                            <div class="post__commenti">
-                                <div class="post__like">
-                                    <a href="">
-                                        <div class="post__like__div" >
-                                            <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
+                        </div>
+                        
+                        
+                            <div class="main__pagina__profilo" id="main__pagina__profiloid">
+                                        <div class="main__pagina__fotoprofilo">
+                                            <img src="Immagini/Foto_Profilo/profilo.png" alt="">
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="post__comment">
-                                    <div class="commento">
-                                        <?php
-                                            echo "@".$username. ":";
-                                        ?>
-                                        aaaaaaaaaaaaaaaa</div>
-        
-                                </div>
-                                <div class="post__scrivi">
-                                    <input type="text">
-                                    <button>
-                                        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
-                                    </button>
-                                </div>
-                            </div>  
-                        </div>
+                                        <div class="main__pagina__profilo__mess">
+                                            <p>Non hai un account?</p>
+                                        </div>
+                                        <a href="File_PHP/Accesso/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin"><b>SIGNIN</b></button></a>
+                                    </div>
+                                    <script>
+                                        var x = document.getElementById("main__pagina__profiloid");
+                                        x.style.height = "300px"
+                                    </script>;                        
                     </div>
-                    <?php if($accesso === true){
-                        echo '<div class="main__pagina__profilo">
-                        <div class="main__pagina__fotoprofilo">
-                            <img src="Immagini/Foto_Profilo/'.$nomeFile.'" alt="">
-                        </div>
-                        <div class="main__pagina__profilo__username" id="nickname">
-                            <b><p>
-                                
-                                        @'. $username. '
-                                
-                            </p></b>
-                        </div>
-                        <div class="main__pagina__profilo__info" id="profilo">
-                            <a href="File_PHP/Pagine/profilo.php">PROFILO</a>
-                        </div>
-                        <div class="main__pagina__profilo__info" id="modifica">
-                            <a href="File_PHP/Pagine/modifica.php">MODIFICA</a>
-                        </div>
-                            
-                        </div>';
-                    }else{
-                        echo '  <div class="main__pagina__profilo" id="main__pagina__profiloid">
-                                    <div class="main__pagina__fotoprofilo">
-                                        <img src="Immagini/Foto_Profilo/profilo.png" alt="">
-                                    </div>
-                                    <div class="main__pagina__profilo__mess">
-                                        <p>Non hai un account?</p>
-                                    </div>
-                                    <a href="File_PHP/Accesso/signin.php" class="main__pagina__profilo__registrati"><button value="submit" id="signin"><b>SIGNIN</b></button></a>
+                </div>';
+                }else{
+                    echo '<div class="main__containerPagina">
+                    <div class="main__pagina">
+                        <div class="main__pagina__corpo">
+                            <div class="post">
+                                <div class="post__foto">
+                                    <img src="uffa.jpg">
                                 </div>
-                                <script>
-                                    var x = document.getElementById("main__pagina__profiloid");
-                                    x.style.height = "300px"
-                                </script>';
-
-                    
-                    }
-                    ?>
-                    
-                </div>
-
-            </div>
-                
+                                <div class="post__commenti">
+                                    <div class="post__like">
+                                        <a href="">
+                                            <div class="post__like__div" >
+                                                <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="post__comment">
+                                        <div class="commento">
+                                            <?php
+                                                echo "@".$username. ":";
+                                            ?>
+                                            aaaaaaaaaaaaaaaa</div>
+            
+                                    </div>
+                                    <div class="post__scrivi">
+                                        <input type="text">
+                                        <button>
+                                            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                                        </button>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                       
+                        <div class="main__pagina__profilo">
+                            <div class="main__pagina__fotoprofilo">
+                                <img src="Immagini/Foto_Profilo/'.$nomeFile.'" alt="">
+                            </div>
+                            <div class="main__pagina__profilo__username" id="nickname">
+                                <b><p>
+                                    
+                                            @'. $username. '
+                                    
+                                </p></b>
+                            </div>
+                            <div class="main__pagina__profilo__info" id="profilo">
+                                <a href="File_PHP/Pagine/profilo.php">PROFILO</a>
+                            </div>
+                            <div class="main__pagina__profilo__info" id="modifica">
+                                <a href="File_PHP/Pagine/modifica.php">MODIFICA</a>
+                            </div>
+                                
+                            </div>
+                        </div>
+                    </div>';
+                }
+            ?>
         </main>
 
         <footer>
