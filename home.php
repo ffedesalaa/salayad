@@ -20,10 +20,7 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <header>
             <a href="home.php"><div class="logo"><b>MOMENTUM</b></div></a>
-            <div class="barraRicerca">
-                <input type="text" name="barra" id="barra" placeholder="Cerca">
-                <ion-icon name="search-outline" id="search-outline"></ion-icon>
-            </div>
+            
 
     
             <?php 
@@ -87,16 +84,6 @@
                     </div>
                 </a>
 
-                <a href="File_PHP/Pagine/esplora.php" id="linkEsplora">
-                    <div class="main__menu__selezione" id="esplora">
-                        <div class="icon">
-                            <ion-icon name="globe-outline"></ion-icon>
-                        </div>
-                        <div class="tendina">
-                            ESPLORA
-                        </div>
-                    </div>
-                </a>
                 <a href="File_PHP/Pagine/amici.php" id="linkAmici">
                     <div class="main__menu__selezione" id="amici">
                         <div class="icon">
@@ -126,6 +113,13 @@
                             CREA
                         </div>
                     </div>
+                </a>
+                <a href="File_PHP/Pagine/profilo.php">
+                    <?php
+                        echo ' <div class="main__menu__profilo">
+                        <img src="Immagini/Foto_Profilo/'.$nomeFile.'" alt="">
+                    </div>'
+                    ?>
                 </a>
             </div>
 

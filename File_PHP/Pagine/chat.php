@@ -39,7 +39,7 @@
                     <div class="main__pagina__corpo">
                         <div class="main__chat__corpo__elementi">
                             <div class="chat__profili">
-                                <p>ffffffffffffffffffffff</p>
+                               
                             </div>
                             <div class="chat__messaggi">
                                 <div class="chat__scrivi">

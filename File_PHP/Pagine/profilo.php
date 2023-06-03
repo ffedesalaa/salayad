@@ -36,17 +36,13 @@
                                 echo "@".$username;
                             ?>
                         </div>
-                        <a href="" id="likes">
-                            <div class="main__infoprofile__info" >
-                                <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
-                            </div>
-                        </a>
+                    
                         <a href="amici.php" id="friends">
-                            <div class="main__infoprofile__info" >
+                            <div class="main__infoprofile__info" id="totamici">
                                 <p><?php echo $nAmici;?></p> <ion-icon name="accessibility-outline" class="proficon" ></ion-icon>
                             </div>
                         </a>
-                        <a href="" id="settings">
+                        <a href="modifica.php" id="settings">
                             <div class="main__infoprofile__info">
                                 <ion-icon name="settings-outline" class="proficon" ></ion-icon> 
                             </div>

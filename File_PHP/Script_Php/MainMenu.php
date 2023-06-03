@@ -13,16 +13,7 @@
             </div>
         </a>
 
-        <a href="esplora.php" id="linkEsplora">
-            <div class="main__menu__selezione" id="esplora">
-                <div class="icon">
-                    <ion-icon name="globe-outline"></ion-icon>
-                </div>
-                <div class="tendina">
-                    ESPLORA
-                </div>
-            </div>
-        </a>
+       
         <a href="amici.php" id="linkAmici">
             <div class="main__menu__selezione" id="amici">
                 <div class="icon">
@@ -53,6 +44,12 @@
                 </div>
             </div>
         </a>
+        <a href="../Pagine/profilo.php">
+                    
+                         <div class="main__menu__profilo">
+                        <img src="../../Immagini/Foto_Profilo/'.$nomeFile.'" alt="">
+                    </div>   
+         </a>
     </div>';
 ?>
 
