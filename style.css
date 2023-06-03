@@ -1205,6 +1205,18 @@ nav{
     object-fit: cover;
   }
   
+  .cont-freccia button{
+    background-color: rgba(256, 256, 256, 0.5);
+    border: none;
+    transition:  transform 0.2s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .cont-freccia button:hover{
+    transform: scale(1.1);
+    border: solid rgb(247, 67, 97);
+    border-radius: 10px;
+  }
   
   .cont-freccia .freccia{
     position: absolute;
@@ -1323,6 +1335,8 @@ nav{
     border: solid rgb(78, 77, 77) 2px;
     transform: scale(1.1);
 }
+
+
 
 
 
