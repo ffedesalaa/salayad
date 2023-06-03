@@ -1,9 +1,10 @@
 <?php
     session_start();
     require('../Sessioni/SessioneInfo.php');
-    if(isset($_FILES['imgPost'])){
-        $nomeFile = $_FILES['imgPost']['name'];
-        $percorsoTemporaneo = $_FILES['imgPost']['tmp_name'];
+    if(isset($_FILES['immagine'])){
+         
+        $nomeFile = $_FILES['immagine']['name'];
+        $percorsoTemporaneo = $_FILES['immagine']['tmp_name'];
         $percorsoDestinazione = '../../Immagini/Foto_Profilo/' . $nomeFile;   
 
         move_uploaded_file($percorsoTemporaneo, $percorsoDestinazione);
