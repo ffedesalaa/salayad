@@ -26,9 +26,9 @@
             <?php
                 require('../Script_PHP/MainMenu.php');
             ?>
-            <div class="main__containerPagina">
-                <div class="main__pagina">
-                    <div class="post">
+            <div class="main__containerPagina__crea">
+                <div class="main__pagina__crea">
+                    <div class="post__crea">
                         <form action="" id='formPost' enctype="multipart/form-data">
                             <div class="selezione__foto__post">
                                 <div class="foto__preview">
@@ -56,7 +56,6 @@
                                 </div>
                                 <button value="submit" class="pubblica">PUBBLICA</button>
                             </div>
-                            
                         </form>
                         <h2 id='messalva'style="position:absolute; color:white; bottom:0; left:35%; padding: 20px; display:none">Post salvato con successo</h2>
                     </div>

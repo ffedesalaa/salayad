@@ -53,7 +53,7 @@
         </main>
         
         <footer>
-            <div>Sito fatto dai Salayad</div>
+            <div><a>Ahmad Fayad - Federico Sala</a></div>
         </footer>
 
         <script src="../.././File_JS/Form_validation.js"></script>

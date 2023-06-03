@@ -301,6 +301,26 @@ main{
     .icon{color: rgb(247, 67, 97);}
 }
 
+
+.main__menu__profilo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid rgb(78, 77, 77) 2px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.main__menu__profilo img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .main__containerPagina{
     background: #000;
     display: flex;
@@ -324,7 +344,7 @@ main{
 }
 
 .post{
-    width: 95%;
+    width: 100%;
     background: rgb(43, 43, 43);
     border-radius: 30px;
     margin: 20px auto;
@@ -817,23 +837,12 @@ input:-webkit-autofill {
     color: #fff;
 }
 
-#likes{
-
-}
-
-#likes .proficon{
-    color: rgb(247, 67, 97);
- }
-
 #friends{
+    margin-left: 100px;
 width: 100px;
 display: flex;
 justify-content: center;
     
-}
-
-#settings{
-
 }
 
 .proficon{
@@ -1109,6 +1118,32 @@ nav{
 
 
 /* CREA */
+
+.main__containerPagina__crea{
+    background: #000;
+    display: flex;
+    margin-left: 250px;
+    width: 100%;
+}
+.main__pagina__crea{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width:95%;
+}
+
+.post__crea{
+    width: 100%;
+    background: rgb(43, 43, 43);
+    border-radius: 30px;
+    margin: 20px auto;
+    border: solid rgb(78, 77, 77) 4px; 
+    height: 400px;
+    display: flex;
+    position: relative;
+}
+
 #formPost{
     width: 100%;
     height: 100%;
@@ -1126,7 +1161,7 @@ nav{
 .foto__preview{
     width: 350px;
     height: 300px;
-    border: solid red 2px;
+    border: solid rgb(78, 77, 77) 2px;
     border-radius: 20px;
     margin: 14px 0px 14px 0px;
     overflow: hidden;
@@ -1270,7 +1305,10 @@ nav{
     transform: scale(1.1);
 }
 
+
+
 /*MODIFCA*/
+
 .box_info{
     background: rgb(43, 43, 43);
     border: solid rgb(78, 77, 77) 4px;
@@ -1402,4 +1440,184 @@ nav{
     transform: scale(1.1);
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
     border: solid rgb(78, 77, 77) 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media(max-width:1350px){
+    .tendina{display: none;}
+    .main__menu__selezione{border-bottom: 0px;}
+    .main__menu{width: 65px;}
+    #home:hover{border-bottom: 0px;}
+    #esplora:hover{border-bottom: 0px;}
+    #amici:hover{border-bottom: 0px;}
+    #messaggi:hover{border-bottom: 0px;}
+    #crea:hover{border-bottom: 0px;}
+    .main__containerPagina{margin-left: 65px;}
+    .icon ion-icon{font-size: 28px;}
+    .main__containerPagina__crea{margin-left: 65px;}
+    .main__menu__profilo{display: block;}
+    
+}
+
+@media(max-width:1140px){
+    .main__pagina__profilo{display: none;}
+    .main__menu__profilo{display: block;}
+    .main__pagina__corpo{ margin: 0 auto;}  
+    }
+
+@media(max-width:888px){
+    .post{height: 770px; flex-wrap: wrap;}
+    .post__foto{width: 100%; height: 45%; margin-bottom: 2px;}
+    .post__commenti{width: 100%; height: 55%;}
+    .main__containerPagina{margin-left: 50px;}
+    .main__pagina__corpo{width: 400px;}
+    .selezione__foto__post{width: 100%; height: 50%;}
+    .commento__foto__post{width: 100%; height: 50%;}
+    .main__containerPagina__crea{margin-left: 50px; display: flex; flex-wrap: wrap;}
+    .post__crea{height: 770px;}
+}
+
+@media(max-width:830px){
+    #friends{display: none;}
+}
+
+@media(max-width:580px){
+    .main__infoprofile__username{font-size: 25px;}
 }

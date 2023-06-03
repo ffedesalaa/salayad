@@ -167,7 +167,7 @@
             }
         ?>
         <footer>
-            <div>Sito fatto dai Salayad</div>
+            <div><a>Ahmad Fayad - Federico Sala</a></div>
         </footer>
     </div>
 </body>
