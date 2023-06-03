@@ -50,6 +50,7 @@
                     </div>
                     <div class="main__infoprofile__post">
                         <?php 
+                        if($infoPost != '')
                         for ($i=0; $i < count($infoPost); $i++) {?> 
 
                         <div class="infoprofile__post">

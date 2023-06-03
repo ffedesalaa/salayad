@@ -95,6 +95,8 @@
                             $infoPost[] = $row;
                             $nPost++;
                             }
+                        }else{
+                            $infoPost[]='';
                         }
                             $myquery="SELECT immaginepost.immagine, post.idPost
                                     FROM post JOIN appartiene ON appartiene.idPost = post.idPost JOIN immaginepost ON appartiene.idImg=immaginepost.id";
@@ -104,6 +106,8 @@
                                 while ($row = $ris->fetch_assoc()) {
                                 $infoPostImg[] = $row;
                                 }
+                        }else{
+                            $infoPostImg[]='';
                         }
                         session_start();
                         $_SESSION['nome'] = $informazioni[0]['Nome'];
@@ -127,7 +131,7 @@
                         mesAccesso.style.display = 'block';
                         
                         </script>";
-                        header("Refresh: 2; URL=../../home.php"); 
+                        header("Refresh: 2; URL=../../home.php");
                         $conn->close();            
                     
 
