@@ -456,10 +456,15 @@ main{
     margin: 0 auto;
     margin-top: 20px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    
 }
 
 .main__pagina__fotoprofilo img{
+    width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 #linkArea{
     display: block;
@@ -742,6 +747,7 @@ input:-webkit-autofill {
 .contenitoreFoto__icona img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .contenitoreFoto__icona label{
     overflow: hidden;
@@ -1219,4 +1225,138 @@ nav{
     background: linear-gradient(to right, orange, rgb(247, 67, 97));
     border: solid rgb(78, 77, 77) 2px;
     transform: scale(1.1);
+}
+
+/*MODIFCA*/
+.box_info{
+    background: rgb(43, 43, 43);
+    border: solid rgb(78, 77, 77) 4px;
+    width: 80%;
+    height: 450px;
+    margin: 10px auto;
+    display: flex;
+    border-radius: 20px;
+}
+.box_info__img, .box_info__dati{
+    width: 50%;
+}
+.box_info__dati{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: auto 0;
+    position: relative;
+    padding: 20px 0 0 20px;
+}
+
+.box_info__dati__singolo{
+    min-height: 25px;
+    font-size: 18px;
+    font-family: "fontregular";
+    width: 100%;
+    border-bottom: solid rgb(78, 77, 77) 2px;
+    display: flex;
+    position: relative;
+}
+.buttonModifica{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top:0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box_info__dati__singolo ion-icon{
+    font-size: 20px;
+    color: #fff;
+}
+.formModifica{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background:rgb(54, 54, 54);
+    border-radius:10px 10px 0 0;
+}
+
+.formModifica input{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-family: 'fontregular';
+    color: #fff;
+    width: 60%;
+    padding-left: 10px;
+}
+.formModifica input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 100px rgb(43, 43, 43)  !important;
+}
+.formModifica button{
+    cursor: pointer;
+    background: rgb(78, 77, 77);
+    border: solid rgb(247, 67, 97) 2px;
+    border-radius: 10px;
+    color: #fff;
+    margin: 4px auto;
+}
+
+#imgModidica{
+    height: 300px;
+    width: 300px;
+}    
+
+.box_info__dati h1{
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    font-family: 'fontregular';
+}
+.box_info__dati h2{
+    color: rgb(131, 131, 131) ;
+    width: 100%;
+    margin-top : 10px;
+    font-family: 'fontregular';
+    font-size: 15px;
+}
+.box_info__dati p{
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+#formModificaImg{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.bottoniModifica{
+    text-align: center;
+    display: block ;
+    cursor: pointer;
+    width: 40%;
+    font-size: 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background: rgb(78, 77, 77);
+    border: solid rgb(247, 67, 97) 2px;
+    color:white;
+    padding: 5px 0;
+    transition: transform 0.2s ease-in-out;
+    font-family: "fontregular";
+
+
+}
+.bottoniModifica:hover{
+    transform: scale(1.1);
+    background: linear-gradient(to right, orange, rgb(247, 67, 97));
+    border: solid rgb(78, 77, 77) 2px;
 }
