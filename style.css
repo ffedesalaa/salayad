@@ -354,6 +354,22 @@ main{
     position: relative;
 }
 
+.post__prelogin{
+    width: 100%;
+    background: rgb(43, 43, 43);
+    border-radius: 30px;
+    margin: 20px auto;
+    border: solid rgb(78, 77, 77) 4px; 
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "fontregular";
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+}
+
 .post__foto{
     width: 360px;
     height: 360px;
@@ -1615,6 +1631,7 @@ nav{
     .commento__foto__post{width: 100%; height: 50%;}
     .main__containerPagina__crea{margin-left: 50px; display: flex; flex-wrap: wrap;}
     .post__crea{height: 770px;}
+    .post__prelogin{font-size: 20px;}
 }
 
 @media(max-width:830px){
