@@ -13,10 +13,14 @@
                 $fileName = $_FILES['imgPost']['name'][$i];
                 $myquery="INSERT INTO immaginepost (immagine)
                 VALUES ('$fileName')";
-    
+                echo $fileName;
                 if($conn->query($myquery) === true){
                     $idImg[] = mysqli_insert_id($conn);
                 }
+                $percorsoTemporaneo = $_FILES['imgPost']['tmp_name'][$i];
+                $percorsoDestinazione = '../../Immagini/Immagini_Post/'. $fileName; 
+
+                move_uploaded_file($percorsoTemporaneo, $percorsoDestinazione);
             }
         }
         if(isset($_POST['commento'])) $commento = $_POST['commento']; else $commento = "";
@@ -30,7 +34,7 @@
             $myquery="INSERT INTO appartiene(idPost,idImg)
             VALUES ('$idPost','$idImg[$i]')";
             if($conn->query($myquery) === true){
-              Echo $i;
+              echo $i;
             }
 
         }

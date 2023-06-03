@@ -335,13 +335,13 @@ main{
 }
 
 .post__foto{
-    width: 50%;
+    width: 360px;
+    height: 360px;
     border: solid rgb(78, 77, 77) 3px;
     margin: 20px;
     border-radius: 30px;
-    display: flex;
-    align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .post__commenti{
@@ -868,6 +868,8 @@ justify-content: center;
 }
 
 .infoprofile__post{
+    position: relative;
+    display: flex;
     width: 60%;
     background: rgb(43, 43, 43);
     border-radius: 30px;
@@ -1133,7 +1135,7 @@ nav{
     position: relative;
 }
 .slider{
-    height: 400px;
+    height: 100%;
     display: flex;
     transition: all 0.3s;
     
@@ -1161,14 +1163,14 @@ nav{
     align-items: center;
   }
   .sinistra{
-    left: 5px;
+    left: 5px;;
   }
   
   .destra{
     right: 5px;
   }
   
-  ion-icon{
+  .cont-freccia ion-icon{
     font-size: 30px;
   }
   

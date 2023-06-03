@@ -53,15 +53,63 @@
                         </a>
                     </div>
                     <div class="main__infoprofile__post">
+                        <?php 
+                        for ($i=0; $i < count($infoPost); $i++) {?> 
+
                         <div class="infoprofile__post">
-                            
+
+                            <div class="post__foto">
+                            <?php 
+                                $nImmagini = 0;
+                                $immagineper = [];
+                                    for($y=0; $y < count($infoPostImg); $y++){
+                                        if($infoPost[$i]['idPost'] == $infoPostImg[$y]['idPost']){
+                                            $nImmagini++;
+                                            $immagineper[]=$infoPostImg[$y]['immagine'];
+                                }}
+                                    $totImg[$i]= $nImmagini?> 
+                                <div class='slider' id="slider<?php echo $i?>" style='width:<?php echo $nImmagini*100;?>%'>
+                                <?php 
+
+                                        for($j=0; $j < $nImmagini; $j++){
+                                            ?> 
+                                    <div class="img-singola img-sing<?php echo $i?>">
+
+                                        <img src="../../Immagini/Immagini_Post/<?php echo $immagineper[$j]?>" alt="">
+                                    </div>   
+                                    <?php 
+                                    }?> 
+
+
+
+                                </div>
+                                <div class="cont-freccia">
+                                        <button class="freccia sinistra" id="<?php echo 'sinistra'.$i ?>"><ion-icon name="chevron-back-outline"></ion-icon></button> 
+                                        <button class="freccia destra" id="<?php echo 'destra'.$i ?>"><ion-icon name="chevron-forward-outline"></ion-icon></button> 
+                                    </div>
+                            </div>
+                            <div class="post__commenti">
+                                <div class="post__like">
+                                    <a href="">
+                                        <div class="post__like__div" >
+                                            <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post__comment">
+                                    <div class="commento">
+                                    </div>
+                                </div>
+                                <div class="post__scrivi">
+                                    <input type="text">
+                                    <button>
+                                        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>  
                         </div>
-                        <div class="infoprofile__post">
-                            
-                        </div>
-                        <div class="infoprofile__post">
-                            
-                        </div>
+                    <?php 
+                        }?> 
                     </div>
                 </div>
             </div>
@@ -71,7 +119,8 @@
         <div><a>Ahmad Fayad - Federico Sala</a></div>
     </footer>
 
-        <script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script >
             <?php 
             if($accesso === false):
             ?>
@@ -83,7 +132,41 @@
             <?php 
             endif
             ?>
+
+
+            $(document).ready(function() {
+                $('.freccia').click(function() {
+                var idDinamico = $(this).attr('id');
+                
+                var regex = /sinistra/;
+                var sectionIndex = 0;
+                if(regex.test(idDinamico) === true){
+                    var idNum = idDinamico.replace("sinistra", "");
+                    var slider = 'slider'+idNum;
+                    var id = 'img-sing'+idNum;
+                    var divImg = document.getElementsByClassName(id);
+                    var num = divImg.length;
+                    var slid = document.getElementById(slider);
+                    sectionIndex = (sectionIndex >0) ? sectionIndex - 1 :0 ;
+                    slid.style.transform = 'translate('+(sectionIndex) * +(100/num) +'%)';
+
+                }
+                else{
+                    var idNum = idDinamico.replace("destra", "");
+                    var slider = 'slider'+idNum;
+                    var id = 'img-sing'+idNum;
+                    var divImg = document.getElementsByClassName(id);
+                    var num = divImg.length;
+                    var slid = document.getElementById(slider); 
+                    sectionIndex = (sectionIndex >num-1) ? sectionIndex - 1 :num-1 ;
+                    slid.style.transform = 'translate('+(sectionIndex) * -(100/num) +'%)';
+                }
+             });
+        });
+
+
         </script>
+           
     <div id="container-pagina">
 </body>
 </html>

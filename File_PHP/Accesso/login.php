@@ -84,7 +84,27 @@
                         while ($row = $ris->fetch_assoc()) {
                             $informazioni[] = $row;
                         }
-
+                        $myquery="SELECT post.commento, post.like, post.data, post.idPost
+                                    FROM utente JOIN post ON post.idUtente=utente.Email 
+                                    WHERE utente.Email = '$email'";
+                        $nPost = 0;
+                        $ris = $conn->query($myquery);
+                        if($ris->num_rows >0) {
+                            $infoPost = array();
+                            while ($row = $ris->fetch_assoc()) {
+                            $infoPost[] = $row;
+                            $nPost++;
+                            }
+                        }
+                            $myquery="SELECT immaginepost.immagine, post.idPost
+                                    FROM post JOIN appartiene ON appartiene.idPost = post.idPost JOIN immaginepost ON appartiene.idImg=immaginepost.id";
+                            $ris = $conn->query($myquery);
+                            if($ris->num_rows >0) {
+                                $infoPostImg = array();
+                                while ($row = $ris->fetch_assoc()) {
+                                $infoPostImg[] = $row;
+                                }
+                        }
                         session_start();
                         $_SESSION['nome'] = $informazioni[0]['Nome'];
                         $_SESSION['cognome'] = $informazioni[0]['Cognome'];
@@ -93,6 +113,9 @@
                         $_SESSION['password'] = $password;
                         $_SESSION['numero'] = $informazioni[0]['Numero'];
                         $_SESSION['fotoProfilo'] = $informazioni[0]['PercFotoProf'];
+                        $_SESSION['infoPost'] = $infoPost;
+                        $_SESSION['infoPostImg'] = $infoPostImg;
+                        $_SESSION['nPost'] = $nPost;
                         $_SESSION['accesso'] = true; 
 
                         echo "   <script>
@@ -104,10 +127,8 @@
                         mesAccesso.style.display = 'block';
                         
                         </script>";
-
-                        $conn->close();
-
-                        header("Refresh: 2; URL=../../home.php");             
+                        header("Refresh: 2; URL=../../home.php"); 
+                        $conn->close();            
                     
 
                     }
