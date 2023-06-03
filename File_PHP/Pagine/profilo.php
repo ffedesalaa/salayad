@@ -25,41 +25,43 @@
                 require('../Script_PHP/MainMenu.php');
             ?>
 
-            <div class="main__pagina__profile">
-                <div class="main__pagina__infoprofile">
-                    <div class="main__infoprofile__foto">
-                        
-                    </div>
-                    <div class="main__infoprofile__username">
-                        <?php
-                            echo "@".$username;
-                        ?>
-                    </div>
-                    <a href="" id="likes">
-                        <div class="main__infoprofile__info" >
-                            <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
+            <div class="main__containerPagina">
+                <div class="main__pagina">
+                    <div class="main__pagina__infoprofile">
+                        <div class="main__infoprofile__foto">
+                            <img src="../../Immagini/Foto_Profilo/<?php echo $nomeFile;?>" alt="">
                         </div>
-                    </a>
-                    <a href="amici.php" id="friends">
-                        <div class="main__infoprofile__info" >
-                            <p>552.532.333 </p> <ion-icon name="accessibility-outline" class="proficon" ></ion-icon>
+                        <div class="main__infoprofile__username">
+                            <?php
+                                echo "@".$username;
+                            ?>
                         </div>
-                    </a>
-                    <a href="" id="settings">
-                        <div class="main__infoprofile__info">
-                            <ion-icon name="settings-outline" class="proficon" ></ion-icon> 
+                        <a href="" id="likes">
+                            <div class="main__infoprofile__info" >
+                                <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
+                            </div>
+                        </a>
+                        <a href="amici.php" id="friends">
+                            <div class="main__infoprofile__info" >
+                                <p><?php echo $nAmici;?></p> <ion-icon name="accessibility-outline" class="proficon" ></ion-icon>
+                            </div>
+                        </a>
+                        <a href="" id="settings">
+                            <div class="main__infoprofile__info">
+                                <ion-icon name="settings-outline" class="proficon" ></ion-icon> 
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main__infoprofile__post">
+                        <div class="infoprofile__post">
+                            
                         </div>
-                    </a>
-                </div>
-                <div class="main__infoprofile__post">
-                    <div class="infoprofile__post">
-                        
-                    </div>
-                    <div class="infoprofile__post">
-                        
-                    </div>
-                    <div class="infoprofile__post">
-                        
+                        <div class="infoprofile__post">
+                            
+                        </div>
+                        <div class="infoprofile__post">
+                            
+                        </div>
                     </div>
                 </div>
             </div>

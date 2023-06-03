@@ -35,7 +35,7 @@ body{
     background: black;
 }
 
-a{
+a, h1,h2{
     text-decoration: none;
     font-family: "fontregular";
 }
@@ -310,6 +310,7 @@ main{
 .main__pagina{
     padding: 0 20px;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     width:1150px;
 }
@@ -330,6 +331,7 @@ main{
     border: solid rgb(78, 77, 77) 4px; 
     height: 400px;
     display: flex;
+    position: relative;
 }
 
 .post__foto{
@@ -772,52 +774,43 @@ input:-webkit-autofill {
 
 /* PROFILO */
 
-.main__pagina__profile{
-    background: #000;
-    border-right: solid rgb(78, 77, 77) 2px;
-    min-height: 670px;
-    flex: 1;  
-    display: flex;
-    margin-left: 250px;
-    justify-content: center;
-}
 
 .main__pagina__infoprofile{
-    width: 67%;
+    width: 90%;
     border: solid rgb(247, 67, 97) 4px;
     border-radius: 50px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     height: 200px;
+    margin: 0 auto;
     color: #fff;
     align-items: center;
     margin-top: 20px;
     background: rgb(43, 43, 43);
-    position: fixed;
 }
 
 .main__infoprofile__foto{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-image: url("profilo.png");
-    background-size: 120% 115%;
-    background-repeat: no-repeat;
-    background-position: -18px;
     border: solid rgb(78, 77, 77) 4px;
-    margin-left: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
-
+.main__infoprofile__foto img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 .main__infoprofile__username{
     font-size: 50px;
     font-family: "fontbold";
-    margin-left: 20px;
 }
 
 .main__infoprofile__info{
     font-size: 30px;
     font-family: "fontregular";
-    margin-left: 20px;
     display: flex;
     align-items: flex-end;
     height: 50px;
@@ -825,7 +818,7 @@ input:-webkit-autofill {
 }
 
 #likes{
-   margin-left: 100px;
+
 }
 
 #likes .proficon{
@@ -833,12 +826,14 @@ input:-webkit-autofill {
  }
 
 #friends{
-    margin-left: 10px;
+width: 100px;
+display: flex;
+justify-content: center;
     
 }
 
 #settings{
-    margin-left: 8px;
+
 }
 
 .proficon{
@@ -869,7 +864,6 @@ input:-webkit-autofill {
     justify-content: center;
     color: #fff;
     align-items: center;
-    margin-top: 230px;
     flex-wrap: wrap;
 }
 
@@ -1115,7 +1109,12 @@ nav{
 
 
 /* CREA */
-
+#formPost{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 .selezione__foto__post{
     width: 50%;
     height: 100%;
@@ -1130,7 +1129,49 @@ nav{
     border: solid red 2px;
     border-radius: 20px;
     margin: 14px 0px 14px 0px;
+    overflow: hidden;
+    position: relative;
 }
+.slider{
+    height: 400px;
+    display: flex;
+    transition: all 0.3s;
+    
+  }
+.slider .img-singola{
+    flex-basis: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .img-singola img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .cont-freccia .freccia{
+    position: absolute;
+    top:50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sinistra{
+    left: 5px;
+  }
+  
+  .destra{
+    right: 5px;
+  }
+  
+  ion-icon{
+    font-size: 30px;
+  }
+  
 
 .selezione__foto{
     width: 50px;
@@ -1142,6 +1183,7 @@ nav{
     justify-content: center;
     align-items: center;
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .selezione__foto ion-icon{
@@ -1219,6 +1261,7 @@ nav{
     -ms-user-select: none; 
     user-select: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .pubblica:hover{
