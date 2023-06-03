@@ -372,6 +372,7 @@ main{
     width: 100%;
     display: flex;
     justify-content: end;
+    font-family: "fontregular";
 }
 
 .post__like__div{

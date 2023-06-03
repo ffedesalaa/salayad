@@ -38,7 +38,30 @@
             }
 
         }
-        
+        $myquery="SELECT post.commento, post.like, post.data, post.idPost
+                                    FROM utente JOIN post ON post.idUtente=utente.Email 
+                                    WHERE utente.Email = '$email'";
+        $nPost = 0;
+        $ris = $conn->query($myquery);
+        if($ris->num_rows >0) {
+            $infoPost = array();
+            while ($row = $ris->fetch_assoc()) {
+            $infoPost[] = $row;
+            $nPost++;
+            }
+        }
+            $myquery="SELECT immaginepost.immagine, post.idPost
+                    FROM post JOIN appartiene ON appartiene.idPost = post.idPost JOIN immaginepost ON appartiene.idImg=immaginepost.id";
+            $ris = $conn->query($myquery);
+            if($ris->num_rows >0) {
+                $infoPostImg = array();
+                while ($row = $ris->fetch_assoc()) {
+                $infoPostImg[] = $row;
+                }
+        }
+        $_SESSION['infoPost'] = $infoPost;
+        $_SESSION['infoPostImg'] = $infoPostImg;
+        $_SESSION['nPost'] = $nPost;
         
     }
 ?>

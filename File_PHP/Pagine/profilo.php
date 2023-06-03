@@ -85,15 +85,15 @@
                                     </div>
                             </div>
                             <div class="post__commenti">
-                                <div class="post__like">
-                                    <a href="">
-                                        <div class="post__like__div" >
-                                            <p>124.984 </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
-                                        </div>
-                                    </a>
+                                <div class="post__like" style="display:flex">
+                                    <div class="data" style="font-size:20px; display:flex; align-items:end; "><?php echo $infoPost[$i]['data'] ?></div>
+                                    <div class="post__like__div"  style="padding-left:20px">
+                                        <p><?php echo $infoPost[$i]['like'] ?> </p> <ion-icon name="heart-outline" class="proficon" ></ion-icon>
+                                    </div>
                                 </div>
                                 <div class="post__comment">
                                     <div class="commento">
+                                    <?php echo '<b>Creator:</b> '.$infoPost[$i]['commento'] ?>
                                     </div>
                                 </div>
                                 <div class="post__scrivi">
